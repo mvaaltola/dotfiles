@@ -11,7 +11,7 @@ sxhkdreload &
 # run ~/.config/autostart/*.desktop
 dex -a &
 # # run redshift
-~/.config/redshift/launch.sh &
+redshiftreload &
 # wmname fix for IDEA
 export AWT_TOOLKIT="MToolkit wmname LG3D"
 export _JAVA_AWT_WM_NONREPARENTING=1
