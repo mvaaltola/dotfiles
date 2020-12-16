@@ -1,0 +1,51 @@
+# volume controls
+XF86Audio{Raise,Lower}Volume
+    pamixer {-i,-d} 5
+XF86AudioMute
+    pamixer -t
+
+# media controls
+XF86Audio{Play,Next}
+    playerctl {play-pause,next}
+
+super + {F1,F2,F3}
+    playerctl {play-pause,previous,next}
+
+super + shift + {F2,F3}
+    playerctl position {5-,5+}
+
+super + F4
+    notify-send "$(playerctl metadata title)" "$(playerctl metadata artist)/$(playerctl metadata album)"
+
+# launch browser
+super + w
+    vivaldi-snapshot
+
+# brightness controls
+XF86MonBrightness{Up,Down}
+    sudo xbacklight {-inc,-dec} 10
+
+# printscreen
+Print
+    flameshot gui
+
+# lockscreen
+super + shift + @Escape
+    betterlockscreen -l blur -t "enter pass"
+
+# calculator
+XF86Calculator
+    speedcrunch
+
+# screen layout home/away
+super + {_,shift +} F10
+    ~/.config/screenlayout/{home,noext}.sh
+
+# compositor reload
+super + shift + F11
+    ~/.local/bin/picomreload
+
+# reload/set bg
+super + {_,shift +} F12
+    ~/.local/bin/{wpreload,setbg}
+

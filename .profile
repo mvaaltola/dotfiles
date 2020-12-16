@@ -1,0 +1,1 @@
+/home/mikael/.config/zsh/.zprofile

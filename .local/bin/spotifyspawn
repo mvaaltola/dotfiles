@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+pidof spotify || spotify &
+

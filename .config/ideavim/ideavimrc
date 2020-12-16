@@ -1,0 +1,12 @@
+set number relativenumber
+set nu rnu
+set surround
+set commentary
+set ideajoin
+set ideaput
+set ideamarks
+set ignorecase
+set smartcase
+set incsearch
+set iskeyword-=_
+
