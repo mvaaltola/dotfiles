@@ -1,0 +1,2 @@
+export CONDA_AUTO_ACTIVATE_BASE=false
+

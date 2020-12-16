@@ -1,0 +1,11 @@
+##
+## Arch Linux repository mirrorlist
+## Generated on 2020-01-03
+##
+
+## Finland
+# Server = http://arch.mirror.far.fi/$repo/os/$arch
+Server = http://mirror.pseudoform.org/$repo/os/$arch
+Server = https://mirror.pseudoform.org/$repo/os/$arch
+Server = https://mirror.srv.fail/archlinux/$repo/os/$arch
+
