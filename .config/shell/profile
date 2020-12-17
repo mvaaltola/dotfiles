@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# export zsh config dir
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+
+# adds `~/.local/bin` to $PATH
+export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
+
+# defaults
+export EDITOR="nvim"
+export TERMINAL="st"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+export PAGER="less"
+export LESS="S R"
+export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
+export LESSHISTFILE="-"
+export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+
+# fix for java applications in dwm
+export AWT_TOOLKIT="MToolkit wmname LG3D"
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+# load profiles from $XDG_CONFIG_HOME/shell/profile.d
+if test -d ${XDG_CONFIG_HOME:-$HOME/.config}/shell/profile.d/; then
+        for profile in ${XDG_CONFIG_HOME:-$HOME/.config}/shell/profile.d/*.sh; do
+                test -r "$profile" && . "$profile"
+        done
+        unset profile
+fi
+
