@@ -1,0 +1,10 @@
+alias zshconf="vim ~/.config/zsh/.zshrc"
+alias vimconf="nvim ~/.config/nvim/init.vim"
+alias ls="exa"
+alias la="exa -alh"
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
+alias dotbare="/opt/dotbare/dotbare"
+alias cfg="dotbare"
+
