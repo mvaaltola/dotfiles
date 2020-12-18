@@ -8,6 +8,7 @@ alias v="nvim"
 alias dotbare="/opt/dotbare/dotbare"
 alias cfg="dotbare"
 alias nn="quicknote"
+alias ww="nvim ${VWDIR:-$HOME/mikael@vaalto.la/notes/vimwiki}/index.md"
 alias :q="exit"
 alias pq="psql -U mikael -h localhost -p 5413 -d postgres"
 
