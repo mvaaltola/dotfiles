@@ -7,4 +7,7 @@ alias vi="nvim"
 alias v="nvim"
 alias dotbare="/opt/dotbare/dotbare"
 alias cfg="dotbare"
+alias nn="quicknote"
+alias :q="exit"
+alias pq="psql -U mikael -h localhost -p 5413 -d postgres"
 
