@@ -21,6 +21,9 @@ set iskeyword-=_
 " search inrementally
 set incsearch
 
+" update gitgutter faster
+set updatetime=100
+
 " fold by indent
 set foldmethod=indent
 
@@ -70,4 +73,6 @@ Plug 'easymotion/vim-easymotion'
 " init plugin system
 call plug#end()
 
+" disable gitgutter background color
+highlight! link SignColumn LineNr
 
