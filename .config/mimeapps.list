@@ -2,17 +2,17 @@
 application/pdf=org.pwmt.zathura-pdf-poppler.desktop;
 image/png=feh.desktop;
 image/jpeg=feh.desktop;
-text/html=vivaldi-snapshot.desktop
-x-scheme-handler/http=vivaldi-snapshot.desktop
-x-scheme-handler/https=vivaldi-snapshot.desktop
+text/html=vivaldi-stable.desktop
+x-scheme-handler/http=vivaldi-stable.desktop
+x-scheme-handler/https=vivaldi-stable.desktop
 inode/directory=lf.desktop
 x-scheme-handler/mailspring=mailspring.desktop
 x-scheme-handler/msteams=teams.desktop
 x-scheme-handler/mailto=thunderbird.desktop
-x-scheme-handler/about=vivaldi-snapshot.desktop
-x-scheme-handler/unknown=vivaldi-snapshot.desktop
+x-scheme-handler/about=vivaldi-stable.desktop
+x-scheme-handler/unknown=vivaldi-stable.desktop
 
 [Added Associations]
 application/octet-stream=firefox.desktop;
-image/png=firefox.desktop;
-text/plain=firefox.desktop;
+image/png=vivaldi-stable.desktop;
+text/plain=vivaldi-stable.desktop;
