@@ -1,5 +1,5 @@
 ! *.font: Cousine:pixelsize=18:antialias=true:autohint=true;
-*.font: IBMPlexMono:pixelsize=18:antialias=true:autohint=true;
+*.font: IBMPlexMono:pixelsize=16:antialias=true:autohint=true;
 st.borderpx: 20
 Xcursor.size: 16
 
