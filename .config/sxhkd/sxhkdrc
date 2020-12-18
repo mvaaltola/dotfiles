@@ -19,7 +19,7 @@ super + F4
 
 # launch browser
 super + w
-    vivaldi-snapshot
+    vivaldi-stable
 
 # brightness controls
 XF86MonBrightness{Up,Down}
