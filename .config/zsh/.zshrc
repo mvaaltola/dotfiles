@@ -1,8 +1,8 @@
 export ZSH=/usr/share/oh-my-zsh
 ZSH_THEME="zeta"
 plugins=(
-    git
     colored-man-pages
+    git
     gitignore
     fasd
     web-search
