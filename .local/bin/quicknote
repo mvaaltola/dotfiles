@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# create a quick daily note in VimWiki
+
+NOTEPATH="${VWDIR:-$HOME/mikael@vaalto.la/notes/vimwiki}/dailynotes"
+DATE=$(date "+%F")
+
+if test -f $NOTEPATH/$DATE*.md; then
+    nvim "+normal Go" +startinsert $NOTEPATH/$DATE*.md
+else
+    touch $NOTEPATH/$DATE.md
+    echo "- [[$DATE.md]]" >> $NOTEPATH/index.md
+    nvim $NOTEPATH/$DATE.md
+fi
+
