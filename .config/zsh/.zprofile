@@ -24,3 +24,11 @@ export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
 export LESSHISTFILE="-"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 
+# load .sh files from zdotdir/profile.d
+if test -d $ZDOTDIR/profile.d; then
+    for profile in $ZDOTDIR/localprofile.d/*.sh; do
+        test -r "$profile" && . "$profile"
+    done
+    unset profile
+fi
+

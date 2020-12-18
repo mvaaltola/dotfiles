@@ -1,0 +1,6 @@
+export PGDATABASE="kipudev01"
+export PGPORT=5432
+export PGHOST="localhost"
+export PGSSLMODE="disable"
+export KIPU_SKIP_KOMU="true"
+
