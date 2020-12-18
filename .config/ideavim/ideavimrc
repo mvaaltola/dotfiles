@@ -1,12 +1,20 @@
-set number relativenumber
-set nu rnu
 set surround
+set easymotion
 set commentary
 set ideajoin
 set ideaput
 set ideamarks
+
+set number relativenumber
+set nu rnu
 set ignorecase
 set smartcase
 set incsearch
+set scrolloff=5
 set iskeyword-=_
+
+" easymotion
+let mapleader=" "
+map <leader>w <Plug>(easymotion-w)
+map <leader>b <Plug>(easymotion-b)
 

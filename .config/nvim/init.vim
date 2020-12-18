@@ -2,9 +2,18 @@
 set number relativenumber
 set nu rnu
 
+" leave space around cursor
+set scrolloff=5
+
 " ignore case except when typing capitals
 set ignorecase
 set smartcase
+
+" set leader to space
+let mapleader = "\<Space>"
+
+" show ruler at 120chars
+set cc=120
 
 " treat _ as wordseparator
 set iskeyword-=_
@@ -56,7 +65,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " add easymotion for quick jumping
-Plug 'easymootion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 
 " init plugin system
 call plug#end()
