@@ -26,7 +26,7 @@ export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 
 # load .sh files from zdotdir/profile.d
 if test -d $ZDOTDIR/profile.d; then
-    for profile in $ZDOTDIR/localprofile.d/*.sh; do
+    for profile in $ZDOTDIR/profile.d/*.sh; do
         test -r "$profile" && . "$profile"
     done
     unset profile
