@@ -1,5 +1,4 @@
 set surround
-set easymotion
 set commentary
 set ideajoin
 set ideaput
@@ -13,8 +12,16 @@ set incsearch
 set scrolloff=5
 set iskeyword-=_
 
-" easymotion
 let mapleader=" "
-map <leader>w <Plug>(easymotion-w)
-map <leader>b <Plug>(easymotion-b)
+
+" remaps
+" quickly scroll up/down
+nnoremap J 7j
+nnoremap K 7k
+vnoremap J 7j
+vnoremap K 7k
+
+" quickly scroll left/right
+nnoremap H b
+nnoremap L w
 

@@ -46,19 +46,33 @@ set expandtab
 let g:vimwiki_list = [{'path': '~/mikael@vaalto.la/notes/vimwiki/',
     \ 'syntax': 'markdown', 'ext': '.md'}]
 
+" show quick-scope only on keypress
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" remaps
+" quickly scroll up/down
+nnoremap J 7j
+nnoremap K 7k
+vnoremap J 7j
+vnoremap K 7k
+
+" quickly scroll left/right
+nnoremap H b
+nnoremap L w
+
 " vimplug config
 call plug#begin()
 
 " make sure to use single quotes
 
 " change surrounds (cs)
-Plug 'https://github.com/tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " add comments (gc)
-Plug 'https://github.com/tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " add gitgutter
-Plug 'https://github.com/airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 " add vimwiki
 Plug 'vimwiki/vimwiki'
@@ -67,8 +81,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
-" add easymotion for quick jumping
-Plug 'easymotion/vim-easymotion'
+" quick-scope for easier f/t navigation
+Plug 'unblevable/quick-scope'
 
 " init plugin system
 call plug#end()
