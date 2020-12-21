@@ -30,8 +30,13 @@ set foldmethod=indent
 " markdown folding
 filetype plugin indent on
 set foldenable
-let g:vim_markdown_folding_disabled = 1
 let g:vimwiki_folding = 'expr'
+
+" disable spell checking, fold column
+set nospell
+let g:pandoc#modules#disabled = [ "spell" ]
+let g:pandoc#folding#fdc = 0
+
 
 " show existing tabs with 4 spaces
 set tabstop=4
@@ -46,21 +51,29 @@ set expandtab
 let g:vimwiki_list = [{'path': '~/mikael@vaalto.la/notes/vimwiki/',
     \ 'syntax': 'markdown', 'ext': '.md'}]
 
+" quickscope plugin settings
 " show quick-scope only on keypress
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" quickscope colors
+augroup qs_colors
+    autocmd!
+    autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+    autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+augroup END
+
+
+" global search and replace by default
+set gdefault
 
 " remaps
-" quickly scroll up/down
-nnoremap J 7j
-nnoremap K 7k
-vnoremap J 7j
-vnoremap K 7k
 
-" quickly scroll left/right
-nnoremap H b
-nnoremap L w
+" tab goes to matching bracket
+
+nnoremap <tab> %
+vnoremap <tab> %
 
 " vimplug config
+
 call plug#begin()
 
 " make sure to use single quotes
@@ -77,15 +90,22 @@ Plug 'airblade/vim-gitgutter'
 " add vimwiki
 Plug 'vimwiki/vimwiki'
 
-" add markdown support
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-
 " quick-scope for easier f/t navigation
 Plug 'unblevable/quick-scope'
 
+" color schemes
+Plug 'rafi/awesome-vim-colorschemes'
+
+" pandoc, rmarkdown
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-rmarkdown'
+
 " init plugin system
 call plug#end()
+
+" set colorscheme
+colorscheme PaperColor
 
 " disable gitgutter background color
 highlight! link SignColumn LineNr
