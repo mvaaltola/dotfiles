@@ -1,7 +1,14 @@
 ! *.font: Cousine:pixelsize=18:antialias=true:autohint=true;
-*.font: IBMPlexMono:pixelsize=16:antialias=true:autohint=true;
+! *.font: IBMPlexMono:pixelsize=16:antialias=true:autohint=true;
+*.font: BlexMono\ Nerd\ Font:pixelsize=16:antialias=true:autohint=true;
 st.borderpx: 20
+
+! scaling
 Xcursor.size: 16
+Xft.dpi: 96
+Xft.autohint: 0
+Xft.hinting: 1
+Xft.antialias: 1
 
 ! st colors
 ! papercolor-theme
