@@ -3,6 +3,7 @@ set commentary
 set ideajoin
 set ideaput
 set ideamarks
+set sneak
 
 set number relativenumber
 set nu rnu
@@ -13,15 +14,4 @@ set scrolloff=5
 set iskeyword-=_
 
 let mapleader=" "
-
-" remaps
-" quickly scroll up/down
-nnoremap J 7j
-nnoremap K 7k
-vnoremap J 7j
-vnoremap K 7k
-
-" quickly scroll left/right
-nnoremap H b
-nnoremap L w
-
+let g:sneak#label = 1
