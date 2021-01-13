@@ -1,12 +1,12 @@
 # volume controls
 XF86Audio{Raise,Lower}Volume
-    pamixer {-i,-d} 5
+    pamixer {-i,-d} 2
 XF86AudioMute
     pamixer -t
 
 # media controls
-XF86Audio{Play,Next}
-    playerctl {play-pause,next}
+XF86Audio{Play,Next,Prev}
+    playerctl {play-pause,next,previous}
 
 super + {F1,F2,F3}
     playerctl {play-pause,previous,next}
@@ -14,12 +14,11 @@ super + {F1,F2,F3}
 super + shift + {F2,F3}
     playerctl position {5-,5+}
 
+super + XF86Audio{Mute,LowerVolume,RaiseVolume}
+    playerctl {play-pause,previous,next}
+
 super + F4
     notify-send "$(playerctl metadata title)" "$(playerctl metadata artist)/$(playerctl metadata album)"
-
-# launch browser
-super + w
-    vivaldi-stable
 
 # brightness controls
 XF86MonBrightness{Up,Down}
