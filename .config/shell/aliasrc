@@ -11,4 +11,5 @@ alias nn="quicknote"
 alias ww="nvim ${VWDIR:-$HOME/mikael@vaalto.la/notes/vimwiki}/index.md"
 alias :q="exit"
 alias pq="psql -U mikael -h localhost -p 5413 -d postgres"
+alias dc="docker-compose"
 
