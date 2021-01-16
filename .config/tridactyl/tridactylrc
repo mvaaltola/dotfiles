@@ -8,7 +8,7 @@ set configversion 2.0
 set allowautofocus false
 set smoothscroll false
 set hintuppercase false
-set colourscheme shydactyl
+set colourscheme base16-github
 set theme base16-github
 set customthemes.base16-github :root {    /* Github by Chris Kempson (http://chriskempson.com) */
     --base00: #ffffff;
