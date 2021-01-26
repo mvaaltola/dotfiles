@@ -3,7 +3,6 @@ set commentary
 set ideajoin
 set ideaput
 set ideamarks
-set sneak
 
 set number relativenumber
 set nu rnu
@@ -14,4 +13,6 @@ set scrolloff=5
 set iskeyword-=_
 
 let mapleader=" "
-let g:sneak#label = 1
+
+nnoremap ]c :action VcsShowNextChangeMarker<CR>
+nnoremap [c :action VcsShowPrevChangeMarker<CR>
