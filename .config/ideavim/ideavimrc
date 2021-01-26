@@ -14,5 +14,10 @@ set iskeyword-=_
 
 let mapleader=" "
 
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
 nnoremap ]c :action VcsShowNextChangeMarker<CR>
 nnoremap [c :action VcsShowPrevChangeMarker<CR>
+map <leader>r <Action>(RenameElement)
+
