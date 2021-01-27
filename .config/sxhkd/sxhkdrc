@@ -21,6 +21,10 @@ super + shift + {F8,F10}
 super + shift + F9
     notify-send "$(playerctl metadata title)" "$(playerctl metadata artist)/$(playerctl metadata album)"
 
+# clipboard manager
+super + c
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
 # brightness controls
 XF86MonBrightness{Up,Down}
     sudo xbacklight {-inc,-dec} 10
