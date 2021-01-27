@@ -10,7 +10,9 @@ setbg &
 sxhkdreload &
 # run ~/.config/autostart/*.desktop
 dex -a &
-# # run redshift
+# run greenclip
+greenclip daemon &
+# run redshift
 redshiftreload &
 # wmname fix for IDEA
 export AWT_TOOLKIT="MToolkit wmname LG3D"
