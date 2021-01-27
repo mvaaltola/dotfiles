@@ -26,6 +26,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# export TERM
+export TERM=xterm-256color
+
 # Add local bin to PATH
 export PATH=$PATH:~/.local/bin
 
