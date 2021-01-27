@@ -20,4 +20,8 @@ map Q gq
 nnoremap ]c :action VcsShowNextChangeMarker<CR>
 nnoremap [c :action VcsShowPrevChangeMarker<CR>
 map <leader>r <Action>(RenameElement)
-
+nnoremap <leader><Esc> :action ShowErrorDescription<CR>
+nnoremap <leader><CR> :action ShowIntentionActions<CR>
+nnoremap <leader>d :action QuickJavaDoc<CR>
+nnoremap <leader>a :action ParameterInfo<CR>
+nnoremap <leader>p :action ToggleLineBreakpoint<CR>
