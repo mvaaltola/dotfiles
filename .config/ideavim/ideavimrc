@@ -19,6 +19,8 @@ map Q gq
 
 nnoremap ]c :action VcsShowNextChangeMarker<CR>
 nnoremap [c :action VcsShowPrevChangeMarker<CR>
+nnoremap ]m :action MethodDown<CR>
+nnoremap [m :action MethodUp<CR>
 map <leader>r <Action>(RenameElement)
 nnoremap <leader><Esc> :action ShowErrorDescription<CR>
 nnoremap <leader><CR> :action ShowIntentionActions<CR>
