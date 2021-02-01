@@ -16,7 +16,7 @@ let mapleader = "\<Space>"
 set cc=120
 
 " treat _ as wordseparator
-set iskeyword-=_
+" set iskeyword-=_
 
 " search inrementally
 set incsearch
