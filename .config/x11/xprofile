@@ -8,6 +8,8 @@ remaps &
 setbg &
 # run sxhkd
 sxhkdreload &
+# run dwmblocks
+dwmblocks &
 # run ~/.config/autostart/*.desktop
 dex -a &
 # run greenclip
