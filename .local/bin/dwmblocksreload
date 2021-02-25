@@ -1,0 +1,6 @@
+#!/bin/sh
+
+killall -q dwmblocks
+while pgrep -u $UID -x dwmblocks >/dev/null; do sleep 1; done
+dwmblocks &
+
