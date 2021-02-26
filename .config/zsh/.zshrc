@@ -83,6 +83,14 @@ bindkey "^[[A" history-substring-search-up # up
 bindkey "^[[B" history-substring-search-down # down
 bindkey -s "^k" 'cd ..\n'
 
+# nvm initialization
+function nvminit() {
+    export NVM_DIR="$HOME/.local/share/nvm"
+    source /usr/share/nvm/nvm.sh
+    source /usr/share/nvm/bash_completion
+    source /usr/share/nvm/install-nvm-exec
+}
+
 # Conda initialization
 
 function condainit() {
