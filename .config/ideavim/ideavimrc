@@ -25,7 +25,7 @@ nnoremap ]e :action GotoNextError<CR>
 nnoremap [e :action GotoPreviousError<CR>
 nnoremap ]u :action GotoNextElementUnderCaretUsage<CR>
 nnoremap [u :action GotoPrevElementUnderCaretUsage<CR>
-map <leader>r <Action>(RenameElement)
+nnoremap <leader>c :action RenameElement<CR>
 nnoremap <leader><Esc> :action ShowErrorDescription<CR>
 nnoremap <leader><CR> :action ShowIntentionActions<CR>
 nnoremap <leader>d :action QuickJavaDoc<CR>
@@ -33,3 +33,5 @@ nnoremap <leader>a :action ParameterInfo<CR>
 nnoremap <leader>p :action ToggleLineBreakpoint<CR>
 nnoremap <leader>t :action GotoTest<CR>
 nnoremap <leader>s :action InsertLiveTemplate<CR>
+nnoremap <leader>r :action RunClass<CR>
+nnoremap <leader><leader> :action HideAllWindows<CR>
