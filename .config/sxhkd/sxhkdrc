@@ -53,3 +53,15 @@ super + shift + F11
 super + {_,shift +} F12
     ~/.local/bin/{wpreload,setbg}
 
+# leader keymaps
+super + space; r
+    sxhkdreload
+
+super + space; i
+    idea
+
+super + space; q; q
+    qgis
+
+super + space; q; p
+    pistemeta
