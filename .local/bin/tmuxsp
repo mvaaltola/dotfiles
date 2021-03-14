@@ -1,3 +1,4 @@
 #!/bin/sh
 
+(cat ~/.cache/wal/sequences)
 tmux a -t sp > /dev/null 2>&1 || tmux new -s sp
