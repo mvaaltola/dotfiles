@@ -27,6 +27,16 @@ set updatetime=100
 " fold by indent
 set foldmethod=indent
 
+" markdown wrapping and autoformatting
+augroup markdown
+    autocmd!
+    autocmd FileType markdown set cc=0
+    autocmd FileType rmarkdown set cc=0
+augroup END
+" vim-pandoc: hard wraps at col 119 with auto-formatting
+" let g:pandoc#formatting#mode = 'hA'
+" let g:pandoc#formatting#textwidth = '119'
+
 " markdown folding
 filetype plugin indent on
 set foldenable
