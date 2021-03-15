@@ -115,7 +115,8 @@ Plug 'vim-pandoc/vim-rmarkdown'
 call plug#end()
 
 " set colorscheme
-colorscheme PaperColor
+" colorscheme PaperColor
+" set termguicolors
 
 " disable gitgutter background color
 highlight! link SignColumn LineNr
