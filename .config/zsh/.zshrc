@@ -33,6 +33,11 @@ export PATH=$PATH:~/.local/bin
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
 
+# load pywal colorscheme
+(cat ~/.cache/wal/sequences &)
+# source ~/.cache/wal/colors.sh
+
+# vim keybinds
 bindkey -v
 export KEYTIMEOUT=1
 
