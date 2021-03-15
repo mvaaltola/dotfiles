@@ -1,0 +1,8 @@
+configuration {
+	modi: "window,drun,ssh,combi";
+	lines: 20;
+	font: "mono 14";
+	terminal: "st";
+	combi-modi: "drun,ssh";
+	theme: "~/.cache/wal/colors-rofi-dark";
+}
