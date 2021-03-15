@@ -61,6 +61,9 @@ super + space; i
     idea
 
 super + space; q; q
+    qgisdefault
+
+super + space; q; d
     qgis
 
 super + space; q; p
