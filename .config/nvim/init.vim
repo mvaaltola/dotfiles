@@ -105,6 +105,7 @@ Plug 'unblevable/quick-scope'
 
 " color schemes
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'dylanaraps/wal.vim'
 
 " pandoc, rmarkdown
 Plug 'vim-pandoc/vim-pandoc'
@@ -115,8 +116,9 @@ Plug 'vim-pandoc/vim-rmarkdown'
 call plug#end()
 
 " set colorscheme
-" colorscheme PaperColor
 " set termguicolors
+" colorscheme PaperColor
+colorscheme wal
 
 " disable gitgutter background color
 highlight! link SignColumn LineNr
