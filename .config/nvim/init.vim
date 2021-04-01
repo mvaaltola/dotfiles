@@ -24,6 +24,20 @@ set incsearch
 " update gitgutter faster
 set updatetime=100
 
+" statusline
+set statusline=
+set statusline+=%#LineNr#
+set statusline+=\ %f
+set statusline+=%m\
+set statusline+=%=
+set statusline+=%#CursorColumn#
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
+set statusline+=\ 
+
 " fold by indent
 set foldmethod=indent
 
