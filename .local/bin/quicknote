@@ -1,5 +1,7 @@
 #!/bin/sh
 
+(cat ~/.cache/wal/sequences &)
+
 # create a quick daily note in VimWiki
 
 NOTEPATH="${VWDIR:-$HOME/mikael@vaalto.la/notes/vimwiki}/dailynotes"
