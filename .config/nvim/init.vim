@@ -1,6 +1,5 @@
 " show relative line numbers
 set number relativenumber
-set nu rnu
 
 " leave space around cursor
 set scrolloff=5
@@ -8,6 +7,9 @@ set scrolloff=5
 " ignore case except when typing capitals
 set ignorecase
 set smartcase
+
+" search inrementally
+set incsearch
 
 " set leader to space
 let mapleader = "\<Space>"
@@ -17,9 +19,6 @@ set cc=120
 
 " treat _ as wordseparator
 " set iskeyword-=_
-
-" search inrementally
-set incsearch
 
 " update gitgutter faster
 set updatetime=100
@@ -61,7 +60,6 @@ set nospell
 let g:pandoc#modules#disabled = [ "spell" ]
 let g:pandoc#folding#fdc = 0
 
-
 " show existing tabs with 4 spaces
 set tabstop=4
 
@@ -85,9 +83,8 @@ augroup qs_colors
     autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 augroup END
 
-
 " global search and replace by default
-set gdefault
+" set gdefault
 
 " remaps
 
@@ -125,6 +122,9 @@ Plug 'dylanaraps/wal.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
+
+" LaTeX
+Plug 'lervag/vimtex'
 
 " init plugin system
 call plug#end()
