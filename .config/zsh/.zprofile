@@ -6,6 +6,8 @@ export ZDOTDIR="$HOME/.config/zsh"
 
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
+# Adds ~/x to $PATH
+export PATH="$PATH:$(du "$HOME/x" | cut -f2 | paste -sd ':' -)"
 
 export EDITOR="nvim"
 export TERMINAL="st"

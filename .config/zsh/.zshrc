@@ -26,11 +26,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Add local bin to PATH
-export PATH=$PATH:~/.local/bin
-# Add ~/x to PATH
-export PATH=$PATH:~/x
-
 # Load aliases and shortcuts if existent.
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
