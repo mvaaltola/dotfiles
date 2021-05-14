@@ -93,6 +93,12 @@ augroup END
 nnoremap <tab> %
 vnoremap <tab> %
 
+" clipboard with leader
+noremap <Leader>y "+y
+noremap <Leader>p "+p
+noremap <Leader>Y "*y
+noremap <Leader>P "*p
+
 " vimplug config
 
 call plug#begin()
