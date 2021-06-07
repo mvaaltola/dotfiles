@@ -34,6 +34,10 @@ compinit
 (cat ~/.cache/wal/sequences &)
 # source ~/.cache/wal/colors.sh
 
+# Export TERM to fix ssh issues with kitty
+export TERM=xterm-256color
+
+
 # vim keybinds
 bindkey -v
 export KEYTIMEOUT=1
