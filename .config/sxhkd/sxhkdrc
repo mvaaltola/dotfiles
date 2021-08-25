@@ -42,16 +42,16 @@ XF86Calculator
     speedcrunch
 
 # screen layout home/away
-super + {_,shift +} F10
+super + {_,shift +} F3
     ~/.config/screenlayout/{home,noext}.sh
 
 # compositor reload
-super + shift + F11
-    ~/.local/bin/picomreload
+super + shift + F4
+    picomreload
 
 # reload/set bg
-super + {_,shift +} F12
-    ~/.local/bin/{wpreload,setbg}
+super + {_,shift +} F5
+    {wpreload,setbg}
 
 # leader keymaps
 super + space; r
@@ -71,3 +71,6 @@ super + space; q; p
 
 super + space; q; k
     qgiskipu
+
+super + space; q; t
+    qgiskimu
