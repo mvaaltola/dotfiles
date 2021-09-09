@@ -6,5 +6,6 @@ export PGHOST="localhost"
 export PGSSLMODE="disable"
 export QGIS_PLUGIN_USE_DEBUGGER="pydevd"
 export KIPU_SKIP_KOMU="true"
+export QGIS_PLUGINPATH="/home/mikael/.local/share/QGIS/QGIS3/profiles/kipu/python/plugins/kipu-qgis-plugin/src"
 
 qgis --profile kipu
