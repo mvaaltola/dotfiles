@@ -6,4 +6,7 @@ if status is-interactive
     # Load wal terminal colors
     cat ~/.cache/wal/sequences &
 
+    # Set vim keybinds
+    fish_vi_key_bindings
+
 end
