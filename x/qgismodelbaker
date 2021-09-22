@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+export QGIS_PLUGIN_USE_DEBUGGER="pydevd"
+qgis --profile modelbaker
