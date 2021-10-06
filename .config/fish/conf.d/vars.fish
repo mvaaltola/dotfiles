@@ -5,6 +5,7 @@ set -gx LESS "S R"
 set -gx LESSOPEN "| /usr/bin/highlight -O ansi %s 2>/dev/null"
 set -gx LESSHISTFILE "-"
 set -gx BAT_THEME "TwoDark"
+set -gx SXHKD_SHELL "/usr/bin/bash"
 
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx XDG_DATA_HOME "$HOME/.local/share"

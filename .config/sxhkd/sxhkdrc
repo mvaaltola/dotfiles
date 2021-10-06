@@ -1,12 +1,12 @@
 # volume controls
 XF86Audio{Raise,Lower}Volume
-    pamixer {-i,-d} 2
+    pamixer {-i,-d} 2 && kill -44 $(pidof dwmblocks)
 
 super + {XF86AudioRaiseVolume, F12}
-    pamixer {-i,-d} 2
+    pamixer {-i,-d} 2 && kill -44 $(pidof dwmblocks)
 
 {XF86AudioMute, super + F11}
-    pamixer -t
+    pamixer -t && kill -44 $(pidof dwmblocks)
 
 # media controls
 XF86Audio{Play,Next,Prev}
