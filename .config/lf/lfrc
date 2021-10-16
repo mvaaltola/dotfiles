@@ -1,6 +1,5 @@
 # interpreter for shell commands (needs to be POSIX compatible)
 set shell bash
-set color256 true
 
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to
@@ -130,8 +129,8 @@ cmd sudomkfile ${{
 
 # custom bookmarks
 map g/ cd /
-map gd cd ~/Documents
-map gk cd ~/mikael@vaalto.la/koulu
+map gd cd ~/files/docs
+map gk cd ~/mikael@vaalto.la
 map gs cd ~/git
 
 # text editors
