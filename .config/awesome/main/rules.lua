@@ -132,8 +132,8 @@ function _M.get(clientkeys, clientbuttons)
         ontop = false,
         minimized = true,
         sticky = false,
-        width = 900,
-        height = 800
+        width = 1200,
+        height = 900
         -- width = screen_width * 0.5,
         -- height = screen_height * 0.5
       },
