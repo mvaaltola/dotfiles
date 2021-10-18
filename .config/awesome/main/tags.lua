@@ -10,10 +10,10 @@ function _M.get ()
   tags = {
     settings = {
       { names  = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
-        layout = RC.layouts[3]
+        layout = RC.layouts[1]
       },
       { names  = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
-        layout = RC.layouts[1]
+        layout = RC.layouts[3]
       }
     }
   }
