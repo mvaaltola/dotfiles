@@ -10,6 +10,8 @@ local menubar = require("menubar")
 local modkey = RC.vars.modkey
 local terminal = RC.vars.terminal
 
+local scratch = require("scratch")
+
 local _M = {}
 
 -- reading
@@ -149,7 +151,22 @@ function _M.get()
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+
+    --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+    -- Scratchpads
+    awful.key({ modkey }, "grave", function ()
+        scratch.toggle("kitty --class scratchpad", { instance = "scratchpad" })
+    end),
+    awful.key({ modkey }, "z", function ()
+        scratch.toggle("obsidian", { instance = "obsidian" })
+    end),
+    awful.key({ modkey }, "a", function ()
+        scratch.toggle("ramboxpro", { instance = "ramboxpro" })
+    end),
+    awful.key({ modkey }, "e", function ()
+        scratch.toggle("mailspring", { instance = "mailspring" })
+    end)
 
   )
 

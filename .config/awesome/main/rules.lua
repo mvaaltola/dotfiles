@@ -5,6 +5,9 @@ local beautiful = require("beautiful")
 
 local _M = {}
 
+screen_width = awful.screen.focused().geometry.width
+screen_height = awful.screen.focused().geometry.height
+
 -- reading
 -- https://awesomewm.org/apidoc/libraries/awful.rules.html
 
@@ -69,6 +72,99 @@ function _M.get(clientkeys, clientbuttons)
       properties = { 
         titlebars_enabled = true
       }
+    },
+
+    -- Scratchpads
+    -- Terminal scratchpad
+    { rule_any = {
+        instance = { "scratchpad" },
+        class = { "scratchpad" },
+      },
+      properties = {
+        skip_taskbar = false,
+        floating = true,
+        ontop = false,
+        minimized = true,
+        sticky = false,
+        width = screen_width * 0.4,
+        height = screen_height * 0.4
+      },
+      callback = function (c)
+        awful.placement.centered(c, {honor_padding = true, honor_workarea = true})
+        gears.timer.delayed_call(function()
+            c.urgent = false
+        end)
+      end
+    },
+
+    -- Obsidian scratchpad
+    { rule_any = {
+        instance = { "obsidian" },
+        class = { "obsidian" },
+      },
+      properties = {
+        skip_taskbar = false,
+        floating = true,
+        ontop = false,
+        minimized = true,
+        sticky = false,
+        width = 900,
+        height = 800
+        -- width = screen_width * 0.5,
+        -- height = screen_height * 0.5
+      },
+      callback = function (c)
+        awful.placement.centered(c, {honor_padding = true, honor_workarea = true})
+        gears.timer.delayed_call(function()
+            c.urgent = false
+        end)
+      end
+    },
+
+    -- Rambox scratchpad
+    { rule_any = {
+        instance = { "ramboxpro" },
+        class = { "ramboxpro" },
+      },
+      properties = {
+        skip_taskbar = false,
+        floating = true,
+        ontop = false,
+        minimized = true,
+        sticky = false,
+        width = 900,
+        height = 800
+        -- width = screen_width * 0.5,
+        -- height = screen_height * 0.5
+      },
+      callback = function (c)
+        awful.placement.centered(c, {honor_padding = true, honor_workarea = true})
+        gears.timer.delayed_call(function()
+            c.urgent = false
+        end)
+      end
+    },
+
+    -- Mailspring scratchpad
+    { rule_any = {
+        instance = { "Mailspring" },
+        class = { "Mailspring" },
+      },
+      properties = {
+        skip_taskbar = false,
+        floating = true,
+        ontop = false,
+        minimized = true,
+        sticky = false,
+        width = screen_width * 0.6,
+        height = screen_height * 0.5
+      },
+      callback = function (c)
+        awful.placement.centered(c, {honor_padding = true, honor_workarea = true})
+        gears.timer.delayed_call(function()
+            c.urgent = false
+        end)
+      end
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
