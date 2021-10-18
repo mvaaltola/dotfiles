@@ -5,6 +5,7 @@ pcall(require, "luarocks.loader")
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
+require("awful.autofocus") -- deprecated
 
 -- Theme handling library
 local beautiful = require("beautiful")
@@ -20,7 +21,7 @@ require("main.error-handling")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "xresources/theme.lua")
 beautiful.wallpaper = RC.vars.wallpaper
 -- }}}
 
