@@ -21,8 +21,9 @@ require("main.error-handling")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "xresources/theme.lua")
+beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "x_custom"))
 beautiful.wallpaper = RC.vars.wallpaper
+beautiful.notification_icon_size = 0
 -- }}}
 
 modkey = RC.vars.modkey
@@ -80,9 +81,6 @@ RC.globalkeys = binding.bindtotags(RC.globalkeys)
 root.buttons(binding.globalbuttons())
 root.keys(RC.globalkeys)
 -- }}}
-
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Statusbar: Wibar
 require("deco.statusbar")
