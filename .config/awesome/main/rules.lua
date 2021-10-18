@@ -62,9 +62,9 @@ function _M.get(clientkeys, clientbuttons)
       }
     },
 
-    -- Add titlebars to normal clients and dialogs
+    -- Add titlebars only to and dialogs
     { rule_any = {
-        type = { "normal", "dialog" }
+        type = { "dialog" } -- removed "normal"
       }, 
       properties = { 
         titlebars_enabled = true
