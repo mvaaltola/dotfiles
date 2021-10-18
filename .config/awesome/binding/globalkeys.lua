@@ -149,9 +149,12 @@ function _M.get()
               function () awful.client.moveresize( 20,   0,   0,   0) end),
 
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-    -- Menubar
+    -- Menubar and WiBar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
+    awful.key({ modkey }, "b", function()
+        mouse.screen.mywibox.visible = not mouse.screen.mywibox.visible end,
+              {description = "toggle the bar", group = "launcher"}),
 
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     -- Scratchpads
