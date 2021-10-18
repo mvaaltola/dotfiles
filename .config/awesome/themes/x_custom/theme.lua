@@ -44,8 +44,8 @@ theme.border_marked = xrdb.color10
 -- Example:
 --theme.taglist_bg_focus = "#ff0000"
 
-theme.tasklist_bg_focus = xrdb.color13
-theme.tasklist_fg_focus = theme.bg_normal
+theme.tasklist_bg_focus = theme.bg_normal
+theme.tasklist_fg_focus = xrdb.color13
 
 theme.tooltip_fg = theme.fg_normal
 theme.tooltip_bg = theme.bg_normal
