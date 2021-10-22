@@ -21,7 +21,7 @@ local _M = {}
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock("%a %y-%m-%d %T", 1)
+mytextclock = wibox.widget.textclock("%a %d.%m.%y %T", 1)
 
 awful.screen.connect_for_each_screen(function(s)
   -- Wallpaper
@@ -43,7 +43,7 @@ awful.screen.connect_for_each_screen(function(s)
   -- Create a taglist widget
   s.mytaglist = awful.widget.taglist {
     screen  = s,
-    filter  = awful.widget.taglist.filter.all,
+    filter  = function (t) return t.selected or #t:clients() > 0 end,
     buttons = taglist_buttons
   }
 
