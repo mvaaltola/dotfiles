@@ -1,3 +1,6 @@
+-- Prevent naughty from taking over system notifications
+package.loaded["naughty.dbus"] = {}
+
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -5,7 +8,9 @@ pcall(require, "luarocks.loader")
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
-require("awful.autofocus") -- deprecated
+
+-- Automatically focus a client (deprecated)
+require("awful.autofocus")
 
 -- Theme handling library
 local beautiful = require("beautiful")
