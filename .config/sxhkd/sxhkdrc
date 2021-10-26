@@ -10,6 +10,10 @@ super + d
 super + c
     rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
+# dunst notifications
+super + {_,shift +} o
+    dunstctl {close,history-pop}
+
 # volume controls
 XF86Audio{Raise,Lower}Volume
     pamixer {-i,-d} 2 && kill -44 $(pidof dwmblocks)
