@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # start picom compositor
-picom &
+picom --experimental-backends &
 # run kb remap script
 remaps &
 # set wallpaper, colorschemes. runs wal, dunst
