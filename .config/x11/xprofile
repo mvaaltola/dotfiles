@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # start picom compositor
-picom --experimental-backends &
+picom --experimental-backends --backend glx --xrender-sync-fence &
 # run kb remap script
 remaps &
 # set wallpaper, colorschemes. runs wal, dunst
