@@ -10,7 +10,7 @@ alias cfg="dotbare"
 abbr -a g git
 abbr -a gch git checkout
 abbr -a gbr git branch 
-abbr -a gre git remote
+abbr -a gre git rebase
 abbr -a gd git diff
 abbr -a gds git diff --staged
 abbr -a gst git stash
