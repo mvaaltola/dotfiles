@@ -1,6 +1,9 @@
 -- Standard awesome library
 local gears = require("gears")
-local awful     = require("awful")
+local awful = require("awful")
+local xresources = require("beautiful.xresources")
+local xrdb = xresources.get_current_theme()
+local lain = require("lain")
 
 -- Wibox handling library
 local wibox = require("wibox")
@@ -15,13 +18,54 @@ local deco = {
 local taglist_buttons  = deco.taglist()
 local tasklist_buttons = deco.tasklist()
 
-local _M = {}
-
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 -- {{{ Wibar
+
+-- Lain related
+local theme = {}
+theme.bg = xrdb.background
+theme.fg = xrdb.foreground
+theme.font = "Cascadia Code PL 8"
+
+local markup = lain.util.markup
+
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock("%a %d.%m.%y %T", 1)
+local mytextclock = wibox.widget.textclock("%a %d.%m.%y %T", 1)
+mytextclock.font = theme.font
+
+local kblayout = awful.widget.keyboardlayout()
+kblayout.widget.font = theme.font
+
+-- calendar
+local cal = lain.widget.cal({
+    attach_to = { mytextclock },
+    notification_preset = {
+        font = theme.font,
+        fg = theme.fg,
+        bg = theme.bg
+    }
+})
+
+-- mem
+local mem = lain.widget.mem({
+    settings = function()
+        widget:set_markup(markup.font(theme.font, " ram " .. mem_now.used .. " "))
+    end
+})
+
+local pulse = lain.widget.pulse({
+    settings = function()
+        header = " vol "
+        vlevel = volume_now.left
+        if volume_now.muted == "yes" then
+            vlevel = vlevel .. "m "
+        else
+            vlevel = vlevel .. "% "
+        end
+        widget:set_markup(markup.font(theme.font, header .. vlevel))
+    end
+})
 
 awful.screen.connect_for_each_screen(function(s)
   -- Wallpaper
@@ -63,15 +107,17 @@ awful.screen.connect_for_each_screen(function(s)
     { -- Left widgets
       layout = wibox.layout.fixed.horizontal,
       s.mytaglist,
+      s.mylayoutbox,
       s.mypromptbox,
     },
     s.mytasklist, -- Middle widget
     { -- Right widgets
       layout = wibox.layout.fixed.horizontal,
-      awful.widget.keyboardlayout(),
+      kblayout,
       wibox.widget.systray(),
+      mem,
+      pulse.widget,
       mytextclock,
-      s.mylayoutbox,
     },
   }
 end)
