@@ -17,7 +17,7 @@ local theme = dofile(themes_path.."default/theme.lua")
 theme.font          = "Cascadia Code PL 8"
 
 theme.bg_normal     = xrdb.background
-theme.bg_focus      = xrdb.color13
+theme.bg_focus      = xrdb.color2
 theme.bg_urgent     = xrdb.color9
 theme.bg_minimize   = xrdb.color8
 theme.bg_systray    = theme.bg_normal
@@ -45,7 +45,7 @@ theme.border_marked = xrdb.color10
 --theme.taglist_bg_focus = "#ff0000"
 
 theme.tasklist_bg_focus = theme.bg_normal
-theme.tasklist_fg_focus = xrdb.color13
+theme.tasklist_fg_focus = xrdb.color2
 
 theme.tooltip_fg = theme.fg_normal
 theme.tooltip_bg = theme.bg_normal
