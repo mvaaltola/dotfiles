@@ -15,4 +15,4 @@ set -gx DOTBARE_DIR "$HOME/.config/dotfiles"
 set -gx WGETRC "$HOME/.config/wget/wgetrc"
 
 # For fish pj plugin
-set -gx PROJECT_PATHS "$HOME/git" "$HOME/.config"
+set -gx PROJECT_PATHS "$HOME/git" "$HOME/.config" "$HOME/files"
