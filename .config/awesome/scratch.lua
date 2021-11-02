@@ -16,6 +16,7 @@ local function turn_on(c)
     c:tags(ctags)
     c:raise()
     client.focus = c
+    c.ontop = true
 end
 
 -- Turn off this scratch window client (remove current tag from window's tags)
