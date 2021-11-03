@@ -26,7 +26,7 @@ local tasklist_buttons = deco.tasklist()
 local theme = {}
 theme.bg = xrdb.background
 theme.fg = xrdb.foreground
-theme.font = "Cascadia Code PL 8"
+theme.font = "Cascadia Code PL 9"
 
 local markup = lain.util.markup
 
@@ -50,20 +50,31 @@ local cal = lain.widget.cal({
 -- mem
 local mem = lain.widget.mem({
     settings = function()
-        widget:set_markup(markup.font(theme.font, " ram " .. mem_now.used .. " "))
+        widget:set_markup(markup.font(theme.font, " r-" .. mem_now.used .. "m "))
     end
 })
 
-local pulse = lain.widget.pulse({
+local vol = lain.widget.alsa({
     settings = function()
-        header = " vol "
-        vlevel = volume_now.left
-        if volume_now.muted == "yes" then
+        vlevel = volume_now.level
+        if volume_now.status == "off" then
             vlevel = vlevel .. "m "
         else
             vlevel = vlevel .. "% "
         end
-        widget:set_markup(markup.font(theme.font, header .. vlevel))
+        widget:set_markup(markup.font(theme.font, "v-" .. vlevel))
+    end
+})
+
+local bat = lain.widget.bat({
+    settings = function()
+        local perc = bat_now.perc
+        if bat_now.ac_status == 1 then 
+            perc = perc .. "c "
+            else
+            perc = perc .. "% "
+        end
+        widget:set_markup(markup.font(theme.font, "b-" .. perc))
     end
 })
 
@@ -116,7 +127,8 @@ awful.screen.connect_for_each_screen(function(s)
       kblayout,
       wibox.widget.systray(),
       mem,
-      pulse.widget,
+      bat,
+      vol.widget,
       mytextclock,
     },
   }
