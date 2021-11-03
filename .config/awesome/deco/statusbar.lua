@@ -69,12 +69,16 @@ local vol = lain.widget.alsa({
 local bat = lain.widget.bat({
     settings = function()
         local perc = bat_now.perc
-        if bat_now.ac_status == 1 then 
-            perc = perc .. "c "
+        if perc == "N/A" then
+            widget:set_markup("")
             else
-            perc = perc .. "% "
+            if bat_now.ac_status == 1 then 
+                perc = perc .. "c "
+                else
+                perc = perc .. "% "
+            end
+            widget:set_markup(markup.font(theme.font, "b-" .. perc))
         end
-        widget:set_markup(markup.font(theme.font, "b-" .. perc))
     end
 })
 
