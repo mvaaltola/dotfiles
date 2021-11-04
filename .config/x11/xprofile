@@ -2,20 +2,23 @@
 
 # start picom compositor
 picom --experimental-backends --backend glx --xrender-sync-fence &
+
 # run kb remap script
 remaps &
-# set wallpaper, colorschemes. runs wal, dunst
+
+# set wallpaper, colorschemes with wal
 setbg &
-# run sxhkd
-sxhkdreload &
-# run dwmblocks
-dwmblocks &
+
+sxhkd &
+dunst &
+redshift &
+
 # run ~/.config/autostart/*.desktop
 dex -a &
-# run greenclip
+
+# run greenclip clipboard daemon 
 greenclip daemon &
-# run redshift
-redshiftreload &
+
 # wmname fix for IDEA
 export AWT_TOOLKIT="MToolkit wmname LG3D"
 export _JAVA_AWT_WM_NONREPARENTING=1
