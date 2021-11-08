@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # start picom compositor
-picom --experimental-backends --backend glx --xrender-sync-fence &
+picomreload &
 
 # run kb remap script
 remaps &
