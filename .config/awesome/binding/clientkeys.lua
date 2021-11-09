@@ -23,7 +23,7 @@ function _M.get()
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey,           }, "BackSpace", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
-    awful.key({ modkey,           }, "comma",      function (c) c:move_to_screen()              end,
+    awful.key({ modkey,           }, "w",      function (c) c:move_to_screen()              end,
               {description = "move to screen", group = "client"}),
     awful.key({ modkey, "Shift"   }, "t",      function (c) c.ontop = not c.ontop               end,
               {description = "toggle keep on top", group = "client"}),
