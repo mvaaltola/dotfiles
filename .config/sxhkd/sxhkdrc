@@ -32,14 +32,14 @@ super + {F9,F8,F10}
     playerctl {play-pause,previous,next}
 
 super + shift + {F8,F10}
-    playerctl position {5-,5+}
+    playerctl position 5{-,+}
 
 super + shift + F9
     notify-send "$(playerctl metadata title)" "$(playerctl metadata artist)/$(playerctl metadata album)"
 
 # brightness controls
 XF86MonBrightness{Up,Down}
-    xbacklight {-inc,-dec} 10
+    brightnessctl s 10{+,-}%
 
 # printscreen
 Print
