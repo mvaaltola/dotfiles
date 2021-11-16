@@ -1,6 +1,6 @@
 [user]
 	name = Mikael Vaaltola
-	email = mvaaltola@gmail.com
+	email = mikael@vaalto.la
 [core]
 	editor = nvim
 	autocrlf = input
