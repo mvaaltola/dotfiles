@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 xset r rate 300 50
 setxkbmap -layout us,fi -option grp:ctrls_toggle -option ctrl:nocaps

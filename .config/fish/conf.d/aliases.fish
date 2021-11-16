@@ -7,7 +7,7 @@ alias vi="nvim"
 alias :q="exit"
 alias cfg="dotbare"
 
-abbr -a ssh = "kitty +kitten ssh"
+abbr -a ssh kitty +kitten ssh
 abbr -a g git
 abbr -a gch git checkout
 abbr -a gbr git branch 
