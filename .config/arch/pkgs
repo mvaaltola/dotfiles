@@ -4,6 +4,8 @@ neovim
 git
 exa
 bat
+fd
+fzf
 highlight
 
 xorg
