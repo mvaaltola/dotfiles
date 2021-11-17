@@ -1,11 +1,11 @@
 alias vimconf="nvim ~/.config/nvim/init.vim"
 
-alias ls="exa"
-alias la="ls -alh"
-alias vim="nvim"
-alias vi="nvim"
-alias :q="exit"
-alias cfg="dotbare"
+abbr -a ls exa
+abbr -a la exa -alh
+abbr -a vim nvim
+abbr -a vi nvim
+abbr -a :q exit
+abbr -a cfg dotbare
 
 abbr -a ssh kitty +kitten ssh
 abbr -a g git
