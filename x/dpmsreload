@@ -3,3 +3,4 @@
 xset dpms force off
 sleep 3
 xset dpms force on
+notify-send "Reset dpms"
