@@ -57,20 +57,24 @@ XF86Calculator
 super + {_,shift +} F3
     ~/.config/screenlayout/{home,noext}.sh
 
-# compositor reload
-super + shift + F4
-    picomreload
-
-# reload/set bg
-super + {_,shift +} F5
-    {wpreload,setbg}
-
 # leader keymaps
-super + space; r
+super + space; r; s
     sxhkdreload
 
-super + space; i
-    idea
+super + space; r; w
+    wpreload
+
+super + space; r; p
+    picomreload
+
+super + space; r; m
+    monreload
+
+super + space; r; d
+    dunstreload
+
+super + space; r; r
+    redshiftreload
 
 super + space; q; q
     qgisdefault
