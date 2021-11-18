@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+xset dpms force off
+sleep 3
+xset dpms force on
