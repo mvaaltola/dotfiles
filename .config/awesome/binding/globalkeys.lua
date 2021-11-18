@@ -10,6 +10,7 @@ local menubar = require("menubar")
 local modkey = RC.vars.modkey
 local terminal = RC.vars.terminal
 
+local lain = require("lain")
 local scratch = require("scratch")
 
 local _M = {}
@@ -147,6 +148,12 @@ function _M.get()
               function () awful.client.moveresize(-20,   0,   0,   0) end),
     awful.key({ modkey, "Shift"   }, "Right", 
               function () awful.client.moveresize( 20,   0,   0,   0) end),
+
+    -- Resize gaps
+    awful.key({ modkey,           }, "Next", function () lain.util.useless_gaps_resize(1) end,
+              {description = "Increment useless gaps", group = "tag"}),
+    awful.key({ modkey,           }, "Prior", function () lain.util.useless_gaps_resize(-1) end,
+              {description = "Decrement useless gaps", group = "tag"}),
 
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     -- Menubar and WiBar
