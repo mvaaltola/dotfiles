@@ -16,6 +16,7 @@ picom
 xcape
 xclip
 rofi
+libnotify
 
 pulseaudio
 pavucontrol-qt
