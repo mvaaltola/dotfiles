@@ -17,6 +17,7 @@ xcape
 xclip
 rofi
 libnotify
+playerctl
 
 pulseaudio
 pavucontrol-qt
