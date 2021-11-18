@@ -1,4 +1,6 @@
-alias vimconf="nvim ~/.config/nvim/init.vim"
+abbr -a vimconf nvim ~/.config/nvim/init.vim
+abbr -a fishconf nvim ~/.config/fish
+abbr -a sxconf nvim ~/.config/sxhkd/sxhkdrc
 
 abbr -a ls exa
 abbr -a la exa -alh
