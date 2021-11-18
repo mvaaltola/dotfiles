@@ -1,4 +1,0 @@
-#!/bin/sh
-
-(cat ~/.cache/wal/sequences)
-tmux -2 a || tmux
