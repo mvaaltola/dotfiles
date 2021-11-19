@@ -8,6 +8,7 @@ abbr -a vim nvim
 abbr -a vi nvim
 abbr -a :q exit
 abbr -a cfg dotbare
+abbr -a tp trash-put
 
 abbr -a ssh kitty +kitten ssh
 abbr -a g git
