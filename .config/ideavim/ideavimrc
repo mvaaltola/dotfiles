@@ -10,6 +10,7 @@ set smartcase
 set incsearch
 set scrolloff=5
 " set iskeyword-=_
+set visualbell
 
 let mapleader=" "
 
