@@ -4,5 +4,6 @@ configuration {
 	font: "Cascadia Code PL 14";
 	terminal: "kitty";
 	combi-modi: "drun,ssh";
-	theme: "~/.cache/wal/rofi-custom";
 }
+
+@theme "~/.cache/wal/rofi-custom"
