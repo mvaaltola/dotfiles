@@ -4,7 +4,7 @@ super + Return
 
 # launcher
 super + d
-    rofi -show combi
+    rofi -show combi -modi combi
 
 # clipboard manager
 super + c
@@ -16,13 +16,13 @@ super + {_,shift +} o
 
 # volume controls
 XF86Audio{Raise,Lower}Volume
-    pamixer {-i,-d} 2 && kill -44 $(pidof dwmblocks)
+    pamixer {-i,-d} 2
 
 super + {XF86AudioRaiseVolume, F12}
-    pamixer {-i,-d} 2 && kill -44 $(pidof dwmblocks)
+    pamixer {-i,-d} 2
 
 {XF86AudioMute, super + F11}
-    pamixer -t && kill -44 $(pidof dwmblocks)
+    pamixer -t
 
 # media controls
 XF86Audio{Play,Next,Prev}
