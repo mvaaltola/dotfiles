@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
 xset r rate 300 50
-localectl set-x11-keymap us,fi pc105 qwerty grp:ctrls_toggle,ctrl:nocaps
-killall xcape 2>/dev/null ; xcape -e '#66=Escape'
+localectl set-x11-keymap us,fi pc105 qwerty grp:ctrls_toggle,caps:escape
 numlockx on
