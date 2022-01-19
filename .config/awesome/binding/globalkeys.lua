@@ -172,7 +172,7 @@ function _M.get()
         scratch.toggle("obsidian", { instance = "obsidian" })
     end),
     awful.key({ modkey }, "a", function ()
-        scratch.toggle("ramboxpro", { instance = "ramboxpro" })
+        scratch.toggle("rambox", { instance = "rambox" })
     end),
     awful.key({ modkey }, "e", function ()
         scratch.toggle("mailspring", { instance = "mailspring" })

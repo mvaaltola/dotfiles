@@ -123,8 +123,8 @@ function _M.get(clientkeys, clientbuttons)
 
     -- Rambox scratchpad
     { rule_any = {
-        instance = { "ramboxpro" },
-        class = { "ramboxpro" },
+        instance = { "rambox" },
+        class = { "rambox" },
       },
       properties = {
         skip_taskbar = false,
