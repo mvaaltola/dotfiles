@@ -15,6 +15,7 @@ local function turn_on(c)
     end
     c:tags(ctags)
     c:raise()
+    c:move_to_screen(mouse.screen.index)
     client.focus = c
     c.ontop = true
 end
