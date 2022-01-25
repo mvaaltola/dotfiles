@@ -14,10 +14,20 @@ local function turn_on(c)
         if tag ~= current_tag then table.insert(ctags, tag) end
     end
     c:tags(ctags)
+
+    local current_screen = mouse.screen
+    if current_screen.index ~= c.screen.index then
+      local c_geom = c:geometry()
+      local s_geom = current_screen.geometry
+      c_geom["x"] = s_geom["width"] / 2 - (c_geom["width"] / 2)
+      c_geom["y"] = s_geom["height"] / 2 - (c_geom["height"] / 2)
+      c:geometry(c_geom)
+      c:move_to_screen(current_screen.index)
+    end
+
     c:raise()
-    c:move_to_screen(mouse.screen.index)
-    client.focus = c
     c.ontop = true
+    client.focus = c
 end
 
 -- Turn off this scratch window client (remove current tag from window's tags)
