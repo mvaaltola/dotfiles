@@ -6,6 +6,7 @@ exa
 bat
 fd
 fzf
+git-delta
 highlight
 
 xorg
@@ -28,6 +29,7 @@ dunst
 redshift
 dex
 xwallpaper
+python-pywal
 
 vivaldi
 vivaldi-ffmpeg-codecs
