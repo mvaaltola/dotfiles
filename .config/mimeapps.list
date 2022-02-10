@@ -37,3 +37,4 @@ application/xhtml+xml=vivaldi-stable.desktop;
 application/x-extension-xhtml=vivaldi-stable.desktop;
 application/x-extension-xht=vivaldi-stable.desktop;
 text/x-bibtex=vivaldi-stable.desktop;
+text/markdown=nvim.desktop;
