@@ -178,9 +178,13 @@ function _M.get()
         scratch.toggle("mailspring", { instance = "mailspring" })
     end),
 
-    -- Center floating window
+    -- Toggle center floating
     awful.key({ modkey }, "s", function ()
-        awful.placement.centered(mouse.current_client)
+        c = mouse.current_client
+        if c then 
+          c.floating = not c.floating
+          awful.placement.centered(c)
+        end
     end)
   )
 
