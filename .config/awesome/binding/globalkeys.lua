@@ -22,8 +22,8 @@ local _M = {}
 
 function _M.get()
   local globalkeys = gears.table.join(
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
-              {description="show help", group="awesome"}),
+    -- awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    --           {description="show help", group="awesome"}),
 
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     -- Tag browsing
@@ -176,8 +176,12 @@ function _M.get()
     end),
     awful.key({ modkey }, "e", function ()
         scratch.toggle("mailspring", { instance = "mailspring" })
-    end)
+    end),
 
+    -- Center floating window
+    awful.key({ modkey }, "s", function ()
+        awful.placement.centered(mouse.current_client)
+    end)
   )
 
   return globalkeys
