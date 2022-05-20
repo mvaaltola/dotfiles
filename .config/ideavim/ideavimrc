@@ -1,7 +1,6 @@
 set surround
 set commentary
 set ideajoin
-set ideaput
 set ideamarks
 
 set nu rnu
@@ -17,6 +16,7 @@ let mapleader=" "
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
+" Jump to next/prev
 nnoremap ]c :action VcsShowNextChangeMarker<CR>
 nnoremap [c :action VcsShowPrevChangeMarker<CR>
 nnoremap ]m :action MethodDown<CR>
@@ -25,16 +25,24 @@ nnoremap ]e :action GotoNextError<CR>
 nnoremap [e :action GotoPreviousError<CR>
 nnoremap ]u :action GotoNextElementUnderCaretUsage<CR>
 nnoremap [u :action GotoPrevElementUnderCaretUsage<CR>
+
+" Leader maps
 noremap <leader>c :action RenameElement<CR>
 noremap <leader><Esc> :action ShowErrorDescription<CR>
 noremap <leader><CR> :action ShowIntentionActions<CR>
 noremap <leader>d :action QuickJavaDoc<CR>
 noremap <leader>a :action ParameterInfo<CR>
 noremap <leader>P :action ToggleLineBreakpoint<CR>
-noremap <leader>t :action GotoTest<CR>
+noremap <leader>gt :action GotoTest<CR>
 noremap <leader>s :action InsertLiveTemplate<CR>
-noremap <leader>r :action RunClass<CR>
+" Run/debug test under cursor
+noremap <leader>tt :action RunClass<CR>
+noremap <leader>td :action DebugClass<CR>
+
 noremap <leader><leader> :action HideAllWindows<CR>
+" Copy/paste to clipboard
 noremap <leader>y "+y
 noremap <leader>p "+p
+
+" Reload configuration
 noremap <leader>R :source ~/.config/ideavim/ideavimrc<CR>
