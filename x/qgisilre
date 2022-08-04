@@ -6,4 +6,6 @@ export ILRE_DB_HOSTNAME="localhost"
 export ILRE_DB_USERNAME="postgres"
 export ILRE_DB_PASSWORD="postgres"
 
-qgis --profile ilredev
+export QGIS_PLUGIN_USE_DEBUGGER="pydevd"
+
+qgis --profile ilredev --globalsettingsfile /home/mikael/git/ilre/settings.ini
