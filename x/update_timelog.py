@@ -65,17 +65,21 @@ class LoggedHoursUpdater:
 
         line = line[len("- [ ] "):]
         time = line.split()[0]
+        print(time)
 
         try:
             hour_part, min_part = time.split("h")
             if not min_part:  # minutes not given
                 min_part = "0"
-        except ValueError:  # only minutes given
+        except ValueError:  # only minutes given, or not a time entry
             hour_part = 0
             min_part = time
 
-        hours = int(hour_part)
-        mins = int(min_part.removesuffix("m")) / 60
+        try:
+            hours = int(hour_part)
+            mins = int(min_part.removesuffix("m")) / 60
+        except ValueError:  # line has a task that is not a time entry
+            return 0
 
         return round(hours + mins, 2)
 
