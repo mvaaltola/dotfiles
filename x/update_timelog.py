@@ -64,8 +64,10 @@ class LoggedHoursUpdater:
             return 0.0  # line is not a checkbox, i.e. no logged hours
 
         line = line[len("- [ ] "):]
-        time = line.split()[0]
-        print(time)
+        try:
+            time = line.split()[0]
+        except IndexError:  # empty task
+            return 0
 
         try:
             hour_part, min_part = time.split("h")
