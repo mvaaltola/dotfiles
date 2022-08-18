@@ -31,7 +31,7 @@ theme.font = "Cascadia Code PL 9"
 local markup = lain.util.markup
 
 -- Create a textclock widget
-local mytextclock = wibox.widget.textclock("%a %d.%m.%y %T", 1)
+local mytextclock = wibox.widget.textclock("%a %d.%m.%y %H:%M", 15)
 mytextclock.font = theme.font
 
 local kblayout = awful.widget.keyboardlayout()
@@ -45,13 +45,6 @@ local cal = lain.widget.cal({
         fg = theme.fg,
         bg = theme.bg
     }
-})
-
--- mem
-local mem = lain.widget.mem({
-    settings = function()
-        widget:set_markup(markup.font(theme.font, " r-" .. mem_now.used .. "m "))
-    end
 })
 
 local vol = lain.widget.alsa({
@@ -69,12 +62,12 @@ local vol = lain.widget.alsa({
 local bat = lain.widget.bat({
     settings = function()
         local perc = bat_now.perc
-        if perc == "N/A" then
+        if (perc == "N/A" or perc >= 98) then
             widget:set_markup("")
-            else
+        else
             if bat_now.ac_status == 1 then 
                 perc = perc .. "c "
-                else
+            else
                 perc = perc .. "% "
             end
             widget:set_markup(markup.font(theme.font, "b-" .. perc))
@@ -130,7 +123,6 @@ awful.screen.connect_for_each_screen(function(s)
       layout = wibox.layout.fixed.horizontal,
       kblayout,
       wibox.widget.systray(),
-      mem,
       bat,
       vol.widget,
       mytextclock,
