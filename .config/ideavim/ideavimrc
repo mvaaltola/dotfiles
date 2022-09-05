@@ -27,7 +27,8 @@ nnoremap ]u :action GotoNextElementUnderCaretUsage<CR>
 nnoremap [u :action GotoPrevElementUnderCaretUsage<CR>
 
 " Leader maps
-noremap <leader>c :action RenameElement<CR>
+noremap <leader><leader> :action HideAllWindows<CR>
+noremap <leader>rr :action RenameElement<CR>
 noremap <leader><Esc> :action ShowErrorDescription<CR>
 noremap <leader><CR> :action ShowIntentionActions<CR>
 noremap <leader>d :action QuickJavaDoc<CR>
@@ -35,11 +36,17 @@ noremap <leader>a :action ParameterInfo<CR>
 noremap <leader>P :action ToggleLineBreakpoint<CR>
 noremap <leader>gt :action GotoTest<CR>
 noremap <leader>s :action InsertLiveTemplate<CR>
+
 " Run/debug test under cursor
 noremap <leader>tt :action RunClass<CR>
 noremap <leader>td :action DebugClass<CR>
 
-noremap <leader><leader> :action HideAllWindows<CR>
+" Tab manipulation
+noremap <leader>ww :action MoveEditorToOppositeTabGroup<CR>
+noremap <leader>wq :action CloseContent<CR>
+noremap <leader>wQ :action CloseAllEditors<CR>
+
+
 " Copy/paste to clipboard
 noremap <leader>y "+y
 noremap <leader>p "+p
