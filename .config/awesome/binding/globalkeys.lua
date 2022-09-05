@@ -180,7 +180,7 @@ function _M.get()
 
     -- Toggle center floating
     awful.key({ modkey }, "s", function ()
-        c = mouse.current_client
+        local c = client.focus
         if c then 
           c.floating = not c.floating
           awful.placement.centered(c)
