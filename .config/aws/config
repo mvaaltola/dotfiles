@@ -12,3 +12,6 @@ mfa_serial = arn:aws:iam::631260641272:mfa/mikael
 role_arn = arn:aws:iam::631260641272:role/devrole
 source_profile = default
 mfa_serial = arn:aws:iam::631260641272:mfa/mikael
+
+[profile personal]
+region=eu-north-1
