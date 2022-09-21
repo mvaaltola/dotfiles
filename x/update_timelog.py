@@ -56,8 +56,7 @@ class LoggedHoursUpdater:
 
         return round(sum(logged_hours), 2)
 
-    @staticmethod
-    def _parse_hours_logged_in_line(line: str) -> float:
+    def _parse_hours_logged_in_line(self, line: str) -> float:
         """Returns number of hours that are logged in a line of text."""
         line = line.strip()
         if not line.startswith("- ["):
@@ -67,7 +66,13 @@ class LoggedHoursUpdater:
         try:
             time = line.split()[0]
         except IndexError:  # empty task
-            return 0
+            return 0.0
+
+        try:
+            start_time, stop_time = time.split("-")
+            return self._calculate_hours(start_time, stop_time)
+        except ValueError:  # not h:m-h:m notation
+            pass
 
         try:
             hour_part, min_part = time.split("h")
@@ -81,9 +86,34 @@ class LoggedHoursUpdater:
             hours = int(hour_part)
             mins = int(min_part.removesuffix("m")) / 60
         except ValueError:  # line has a task that is not a time entry
-            return 0
+            return 0.0
 
         return round(hours + mins, 2)
+
+    def _calculate_hours(self, start_time: str, stop_time: str) -> float:
+        """Returns the number of hours logged in a h:mm-h:mm note."""
+        
+        try:
+            start_time = self._time_to_float(start_time)
+            stop_time = self._time_to_float(stop_time)
+            return stop_time - start_time
+        except ValueError:
+            return 0.0
+
+    @staticmethod
+    def _time_to_float(time_str: str) -> float:
+        if not (separator := ":") in time_str:
+            separator = "."
+
+        try:
+            h, m = time_str.split(separator)
+        except ValueError:  # only hour given, or not a time entry
+            h, m = time_str, 0
+            if len(h) > 2:  # invalid hour marking
+                raise ValueError
+
+        h, m = int(h), int(m) / 60
+        return h + m
 
     @staticmethod
     def _write_hours(file_path: Path, hours_total: float) -> None:
