@@ -10,12 +10,13 @@ git-delta
 highlight
 
 xorg
-ly
+ly-bin
 awesome
 kitty
 picom
 xcape
 xclip
+numlockx
 rofi
 libnotify
 playerctl
@@ -31,8 +32,7 @@ dex
 xwallpaper
 python-pywal
 
-vivaldi
-vivaldi-ffmpeg-codecs
+firefox
 sxiv
 zathura
 zathura-pdf-poppler
