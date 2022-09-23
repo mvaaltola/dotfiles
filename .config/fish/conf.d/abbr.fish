@@ -21,5 +21,5 @@ abbr -a gst git stash
 abbr -a gsw git switch
 
 abbr -a d docker
-abbr -a dc docker-compose
+abbr -a dc docker compose
 abbr -a pdeps pacman -Qdqt
