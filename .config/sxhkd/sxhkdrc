@@ -77,22 +77,13 @@ super + space; r; r
     redshiftreload
 
 super + space; q; q
-    qgisdefault
-
-super + space; q; d
     qgis
 
-super + space; q; p
-    pistemeta
-
-super + space; q; k
-    qgiskipu
+super + space; q; d
+    qgisdefault
 
 super + space; q; t
     qgiskimu
 
 super + space; q; m
     qgismodelbaker
-
-super + space; q; i
-    qgisilre
