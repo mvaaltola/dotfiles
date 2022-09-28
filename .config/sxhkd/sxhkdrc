@@ -2,7 +2,7 @@
 super + Return
     kitty
 
-# launcher
+# app launcher
 super + d
     rofi -show combi -modi combi
 
@@ -47,15 +47,15 @@ Print
 
 # lockscreen
 super + shift + @Escape
-    betterlockscreen -l blur
+    lock.sh -a -f  # show number of failed attempts
+
+# poweroff
+super + ctrl + shift + @Escape
+    poweroff
 
 # calculator
 XF86Calculator
     speedcrunch
-
-# screen layout home/away
-super + {_,shift +} F3
-    ~/.config/screenlayout/{home,noext}.sh
 
 # leader keymaps
 super + space; r; s
