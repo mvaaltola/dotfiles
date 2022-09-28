@@ -1,6 +1,7 @@
 [user]
   name = Mikael Vaaltola
   email = mikael.vaaltola@vaisala.com
+	github = mvaaltola
 
 [core]
   editor = nvim
