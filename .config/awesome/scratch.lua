@@ -45,11 +45,14 @@ function scratch.raise(cmd, rule)
     local clients = client.get()
     local findex  = util.table.hasitem(clients, client.focus) or 1
     local start   = util.cycle(#clients, findex + 1)
+    local found   = false
 
     for c in awful.client.iterate(matcher, start) do
         turn_on(c)
-        return
+        found = true
     end
+
+    if found then return end
 
     -- client not found, spawn it
     util.spawn(cmd)
