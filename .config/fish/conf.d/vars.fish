@@ -14,7 +14,10 @@ set -gx XDG_CACHE_HOME "$HOME/.cache"
 set -gx DOTBARE_DIR "$HOME/.config/dotfiles"
 set -gx WGETRC "$HOME/.config/wget/wgetrc"
 
-set -gx KUBECONFIG "$XDG_CONFIG_HOME/kube/config"
+set -gx KUBECONFIG "$XDG_CONFIG_HOME/kube/config.local"
+set -gx DOCKER_CONFIG "$XDG_DATA_HOME/docker"
+
+set -gx GOPATH "$HOME/dev/go"
 
 # For fish pj plugin
-set -gx PROJECT_PATHS "$HOME/dev" "$HOME/.config" "$HOME/files"
+set -gx PROJECT_PATHS "$HOME/dev" "$HOME/dev/go/src" "$HOME/.config" "$HOME/files"
