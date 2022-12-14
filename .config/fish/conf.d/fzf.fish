@@ -13,8 +13,13 @@ set --global _fzf_search_vars_command '_fzf_search_variables (set --show | psub)
 set -gx fzf_preview_dir_cmd exa --all --color=always
 
 # Install the default bindings, which are mnemonic and minimally conflict with fish's preset bindings
+fzf_configure_bindings
+
 # Override filefinder with <C-f>
-fzf_configure_bindings --directory=\cf
+# fzf_configure_bindings --directory=\cf
+
+# Show hidden files but ignore .git
+set -gx fzf_fd_opts --hidden --exclude=.git
 
 # Doesn't erase autoloaded _fzf_* functions because they are not easily accessible once key bindings are erased
 function _fzf_uninstall --on-event fzf_uninstall
