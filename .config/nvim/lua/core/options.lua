@@ -3,7 +3,6 @@ local opt = vim.opt  -- set options
 
 -- general
 opt.mouse = 'a'
-opt.clipboard = 'unnamedplus'
 opt.swapfile = false
 
 -- ui
