@@ -122,13 +122,13 @@ class LoggedHoursUpdater:
             lines = f.readlines()
 
         for log_line_idx, line in enumerate(lines):
-            if line.strip().startswith("## log"):
+            if "# log" in line.strip():
                 break
 
         hours = int(hours_total)
         mins = round((hours_total - hours) * 60)
 
-        time_logged_string = f"## log {hours}h"
+        time_logged_string = f"# log {hours}h"
         if mins:  # only write minutes if not even hours
             time_logged_string += f"{mins}m"
         time_logged_string += "\n"
