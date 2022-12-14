@@ -22,4 +22,8 @@ abbr -a gsw git switch
 
 abbr -a d docker
 abbr -a dc docker compose
+abbr -a dcr "docker compose down && docker compose up -d"
+abbr -a dcrf "docker compose down --volumes --remove-orphans && docker compose up -d"
 abbr -a pdeps pacman -Qdqt
+
+abbr -a k kubectl
