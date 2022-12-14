@@ -3,6 +3,10 @@ set commentary
 set ideajoin
 set ideamarks
 
+set quickscope
+# Only highlight on keypress
+let g:qs_highlight_on_keys=["f", "F", "t", "T"]
+
 set nu rnu
 set ignorecase
 set smartcase
@@ -25,31 +29,56 @@ nnoremap ]e :action GotoNextError<CR>
 nnoremap [e :action GotoPreviousError<CR>
 nnoremap ]u :action GotoNextElementUnderCaretUsage<CR>
 nnoremap [u :action GotoPrevElementUnderCaretUsage<CR>
+nnoremap ]f :action GotoSuperMethod<CR>
+nnoremap [f :action GotoImplementation<CR>
+
 
 " Leader maps
-noremap <leader><leader> :action HideAllWindows<CR>
-noremap <leader>rr :action RenameElement<CR>
-noremap <leader><Esc> :action ShowErrorDescription<CR>
-noremap <leader><CR> :action ShowIntentionActions<CR>
-noremap <leader>d :action QuickJavaDoc<CR>
-noremap <leader>a :action ParameterInfo<CR>
-noremap <leader>P :action ToggleLineBreakpoint<CR>
-noremap <leader>gt :action GotoTest<CR>
-noremap <leader>s :action InsertLiveTemplate<CR>
+" View
+nnoremap <leader><leader> :action HideAllWindows<CR>
 
-" Run/debug test under cursor
-noremap <leader>tt :action RunClass<CR>
-noremap <leader>td :action DebugClass<CR>
+" Refactoring and docs
+nnoremap <leader>rr :action RenameElement<CR>
+nnoremap <leader>re :action ExtractMethod<CR>
+nnoremap <leader>ri :action OptimizeImports<CR>
+nnoremap <leader>rt :action InsertLiveTemplate<CR>
+nnoremap <leader>rf :action ReformatCode<CR>
+nnoremap <leader><Esc> :action ShowErrorDescription<CR>
+nnoremap <leader><CR> :action ShowIntentionActions<CR>
 
-" Tab manipulation
-noremap <leader>ww :action MoveEditorToOppositeTabGroup<CR>
-noremap <leader>wq :action CloseContent<CR>
-noremap <leader>wQ :action CloseAllEditors<CR>
+" Testing and debugging
+nnoremap <leader>pp :action ToggleLineBreakpoint<CR>
+nnoremap <leader>pt :action ToggleBreakpointEnabled<CR>
+nnoremap <leader>tt :action RunClass<CR>
+nnoremap <leader>tr :action Rerun<CR>
+nnoremap <leader>td :action DebugClass<CR>
+nnoremap <leader>tq :action Stop<CR>
+nnoremap <leader>gt :action GotoTest<CR>
 
+" Jumping
+nnoremap <leader>gd :action QuickJavaDoc<CR>
+nnoremap <leader>gp :action GotoSuperclass<CR>
+nnoremap <leader>ga :action ParameterInfo<CR>
 
-" Copy/paste to clipboard
-noremap <leader>y "+y
-noremap <leader>p "+p
+" Tab/split manipulation
+nnoremap <leader>ww :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <leader>wv :action SplitVertically<CR>
+nnoremap <leader>ws :action SplitHorizontally<CR>
+nnoremap <leader>wq :action Unsplit<CR>
+nnoremap <leader>wQ :action CloseContent<CR>
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <a-l> :tabm +1<CR>
+nnoremap <a-h> :tabm -1<CR>
+
+" Jump to
+nnoremap <leader>jf :action RecentFiles<CR>
+nnoremap <leader>jj :action RecentLocations<CR>
+
+" Close buffer
+nnoremap <leader>q :x<CR>
 
 " Reload configuration
-noremap <leader>R :source ~/.config/ideavim/ideavimrc<CR>
+nnoremap <leader>R :source ~/.config/ideavim/ideavimrc<CR>
