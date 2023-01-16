@@ -22,8 +22,8 @@ local _M = {}
 
 function _M.get()
   local globalkeys = gears.table.join(
-    -- awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
-    --           {description="show help", group="awesome"}),
+    awful.key({ modkey, "Shift"   }, "/",      hotkeys_popup.show_help,
+              {description="show help", group="awesome"}),
 
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     -- Tag browsing
@@ -175,7 +175,7 @@ function _M.get()
         scratch.toggle("rambox", { instance = "rambox" })
     end),
     awful.key({ modkey }, "e", function ()
-        scratch.toggle("mailspring", { instance = "mailspring" })
+        scratch.toggle("thunderbird", { instance = "Mail" })
     end),
 
     -- Toggle center floating

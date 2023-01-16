@@ -145,10 +145,10 @@ function _M.get(clientkeys, clientbuttons)
       end
     },
 
-    -- Mailspring scratchpad
+    -- Thunderbird scratchpad
     { rule_any = {
-        instance = { "Mailspring" },
-        class = { "Mailspring" },
+        instance = { "Mail" },
+        class = { "Mail" },
       },
       properties = {
         skip_taskbar = false,
