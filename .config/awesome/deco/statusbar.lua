@@ -31,7 +31,7 @@ theme.font = "Cascadia Code PL 9"
 local markup = lain.util.markup
 
 -- Create a textclock widget
-local mytextclock = wibox.widget.textclock("%a %d.%m.%y %H:%M", 15)
+local mytextclock = wibox.widget.textclock("%a %d.%m.%y %H:%M ", 15)
 mytextclock.font = theme.font
 
 local kblayout = awful.widget.keyboardlayout()
