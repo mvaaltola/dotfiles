@@ -10,7 +10,6 @@ remaps &
 setbg &
 
 sxhkd &
-dunst &
 redshift &
 
 # run ~/.config/autostart/*.desktop

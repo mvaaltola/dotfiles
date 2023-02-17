@@ -1,6 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-killall -q dunst
+kill -9 $(pidof dunst) > /dev/null 2>&1
 while pgrep -u $UID -x dunst >/dev/null; do sleep 1; done
-dunst &
-
+dunst --startup_notification true &
