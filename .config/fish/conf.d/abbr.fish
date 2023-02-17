@@ -19,6 +19,10 @@ abbr -a gd git diff
 abbr -a gds git diff --staged
 abbr -a gst git stash
 abbr -a gsw git switch
+abbr -a gl logs
+abbr -a gll git log -p
+abbr -a gc git commit
+abbr -a gca git commit --amend
 
 abbr -a d docker
 abbr -a dc docker compose
