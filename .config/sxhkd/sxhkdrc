@@ -47,7 +47,7 @@ Print
 
 # lockscreen
 super + shift + @Escape
-    lock.sh -a -f  # show number of failed attempts
+    lock
 
 # poweroff
 super + ctrl + shift + @Escape
