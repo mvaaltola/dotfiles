@@ -75,4 +75,10 @@ settings.theme = `
 }
 `;
 
+const hintsCss =
+  "font-size: 10pt; font-family: SauceCodePro Nerd Font, Consolas, Menlo, monospace; border: 0px; color:#2c363c; background: initial; background-color: #f0edec;";
+
+api.Hints.style(hintsCss);
+api.Hints.style(hintsCss, "text");
+
 // click `Save` button to make above settings to take effect (:w).
