@@ -131,7 +131,7 @@ cmd sudomkfile ${{
 map g/ cd /
 map gd cd ~/files/docs
 map gk cd ~/mikael@vaalto.la
-map gs cd ~/git
+map gs cd ~/dev
 
 # text editors
 map e
