@@ -51,13 +51,13 @@ function _M.get()
 
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     -- Layout manipulation
-    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
+    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)         end,
               {description = "swap with next client by index", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
+    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)         end,
               {description = "swap with previous client by index", group = "client"}),
     awful.key({ modkey,           }, "Escape", function () awful.screen.focus_relative( 1) end,
               {description = "focus the next screen", group = "screen"}),
-    awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative(-1) end,
+    awful.key({ modkey, "Shift"   }, "Escape", function () awful.screen.focus_relative(-1) end,
               {description = "focus the previous screen", group = "screen"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
@@ -74,10 +74,10 @@ function _M.get()
     -- Standard program
     -- awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
     --           {description = "open a terminal", group = "launcher"}),
-    awful.key({ modkey, "Control" }, "r", awesome.restart,
+    awful.key({ modkey, "Control"          }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
-    -- awful.key({ modkey, "Shift"   }, "q", awesome.quit,
-    --           {description = "quit awesome", group = "awesome"}),
+    awful.key({ modkey, "Control", "Shift" }, "r", awesome.quit,
+              {description = "quit awesome", group = "awesome"}),
 
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     -- Layout manipulation
@@ -93,9 +93,9 @@ function _M.get()
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "t", function () awful.layout.inc( 1)                end,
+    awful.key({ modkey,           }, "t", function () awful.layout.inc( 1)                    end,
               {description = "select next", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "t", function () awful.layout.inc(-1)                end,
+    awful.key({ modkey, "Shift"   }, "t", function () awful.layout.inc(-1)                    end,
               {description = "select previous", group = "layout"}),
 
     awful.key({ modkey, "Control" }, "n",
@@ -176,15 +176,6 @@ function _M.get()
     end),
     awful.key({ modkey }, "e", function ()
         scratch.toggle("thunderbird", { instance = "Mail" })
-    end),
-
-    -- Toggle center floating
-    awful.key({ modkey }, "s", function ()
-        local c = client.focus
-        if c then 
-          c.floating = not c.floating
-          awful.placement.centered(c)
-        end
     end)
   )
 

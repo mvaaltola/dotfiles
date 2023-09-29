@@ -86,8 +86,8 @@ function _M.get(clientkeys, clientbuttons)
         ontop = false,
         minimized = true,
         sticky = false,
-        width = screen_width * 0.4,
-        height = screen_height * 0.4
+        width = screen_width * 0.5,
+        height = screen_height * 0.6
       },
       callback = function (c)
         awful.placement.centered(c, {honor_padding = true, honor_workarea = true})

@@ -23,12 +23,18 @@ function _M.get()
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey,           }, "BackSpace", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
-    awful.key({ modkey,           }, "w",      function (c) c:move_to_screen()              end,
+    awful.key({ modkey,           }, "w",      function (c) c:move_to_screen()                  end,
               {description = "move to screen", group = "client"}),
+    awful.key({ modkey, "Shift"   }, "s",      function (c) c.sticky = not c.sticky             end,
+               {description = "toggle sticky", group = "client"}),
+    awful.key({ modkey,           }, "s",
+      function (c)
+        c.floating = not c.floating
+        awful.placement.centered(c)
+      end ,
+      {description = "toggle centered floating", group = "client"}),
     awful.key({ modkey, "Shift"   }, "b",      awful.titlebar.toggle,
               {description = "toggle title bar", group = "client"}),
-    -- awful.key({ modkey, "Shift"   }, "t",      function (c) c.ontop = not c.ontop               end,
-    --           {description = "toggle keep on top", group = "client"}),
     awful.key({ modkey,           }, "n",
       function (c)
         -- The client currently has the input focus, so it cannot be
