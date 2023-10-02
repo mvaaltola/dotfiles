@@ -130,23 +130,23 @@ function _M.get()
     -- Resize
     --awful.key({ modkey, "Control" }, "Left",  function () awful.client.moveresize( 20,  20, -40, -40) end),
     --awful.key({ modkey, "Control" }, "Right", function () awful.client.moveresize(-20, -20,  40,  40) end),
-    awful.key({ modkey, "Control" }, "Down",  
+    awful.key({ modkey, "Control" }, "Down",
               function () awful.client.moveresize( 0, 0, 0, -20) end),
-    awful.key({ modkey, "Control" }, "Up",    
+    awful.key({ modkey, "Control" }, "Up",
               function () awful.client.moveresize( 0, 0, 0,  20) end),
-    awful.key({ modkey, "Control" }, "Left",  
+    awful.key({ modkey, "Control" }, "Left",
               function () awful.client.moveresize( 0, 0, -20, 0) end),
-    awful.key({ modkey, "Control" }, "Right", 
+    awful.key({ modkey, "Control" }, "Right",
               function () awful.client.moveresize( 0, 0,  20, 0) end),
 
     -- Move
-    awful.key({ modkey, "Shift"   }, "Down",  
+    awful.key({ modkey, "Shift"   }, "Down",
               function () awful.client.moveresize(  0,  20,   0,   0) end),
-    awful.key({ modkey, "Shift"   }, "Up",    
+    awful.key({ modkey, "Shift"   }, "Up",
               function () awful.client.moveresize(  0, -20,   0,   0) end),
-    awful.key({ modkey, "Shift"   }, "Left",  
+    awful.key({ modkey, "Shift"   }, "Left",
               function () awful.client.moveresize(-20,   0,   0,   0) end),
-    awful.key({ modkey, "Shift"   }, "Right", 
+    awful.key({ modkey, "Shift"   }, "Right",
               function () awful.client.moveresize( 20,   0,   0,   0) end),
 
     -- Resize gaps
