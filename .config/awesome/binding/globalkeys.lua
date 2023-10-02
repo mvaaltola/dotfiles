@@ -12,6 +12,7 @@ local terminal = RC.vars.terminal
 
 local lain = require("lain")
 local scratch = require("scratch")
+local alltags = require("alltags")
 
 local _M = {}
 
@@ -176,7 +177,11 @@ function _M.get()
     end),
     awful.key({ modkey }, "e", function ()
         scratch.toggle("thunderbird", { instance = "Mail" })
-    end)
+    end),
+
+    -- Toggle all tags
+    awful.key({ modkey }, "0", function () ToggleAllTags() end)
+
   )
 
   return globalkeys
