@@ -30,8 +30,9 @@ abbr -a gc git commit
 abbr -a gca git commit --amend --no-edit
 abbr -a gm git merge --no-ff
 abbr -a gundo git reset --soft HEAD~1
-abbr -a gp git push --set-upstream
-abbr -a gpf git push -f
+abbr -a gP git push --set-upstream
+abbr -a gPF git push -f
+abbr -a gp git pull
 
 abbr -a d docker
 abbr -a dc docker compose
@@ -41,6 +42,7 @@ abbr -a dcd "docker compose down --volumes --remove-orphans"
 abbr -a dcu "docker compose up -d"
 
 abbr -a ppo "paru -Syu --noconfirm && printf '\n\nshutting down in 15s\n\n' && sleep 15 && poweroff"
+abbr -a pinst pacman -Qent
 abbr -a pdeps pacman -Qdqt
 
 abbr -a k kubectl
