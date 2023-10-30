@@ -11,7 +11,7 @@ set nu rnu
 set ignorecase
 set smartcase
 set incsearch
-set scrolloff=5
+set scrolloff=8
 " set iskeyword-=_
 set visualbell
 
@@ -29,9 +29,8 @@ nnoremap ]e :action GotoNextError<CR>
 nnoremap [e :action GotoPreviousError<CR>
 nnoremap ]u :action GotoNextElementUnderCaretUsage<CR>
 nnoremap [u :action GotoPrevElementUnderCaretUsage<CR>
-nnoremap ]f :action GotoSuperMethod<CR>
-nnoremap [f :action GotoImplementation<CR>
-
+nnoremap ]i :action GotoImplementation<CR>
+nnoremap [i :action GotoSuperMethod<CR>
 
 " Leader maps
 " View
@@ -53,9 +52,9 @@ nnoremap <leader>tt :action RunClass<CR>
 nnoremap <leader>tr :action Rerun<CR>
 nnoremap <leader>td :action DebugClass<CR>
 nnoremap <leader>tq :action Stop<CR>
-nnoremap <leader>gt :action GotoTest<CR>
 
 " Jumping
+nnoremap <leader>gt :action GotoTest<CR>
 nnoremap <leader>gd :action QuickJavaDoc<CR>
 nnoremap <leader>gp :action GotoSuperclass<CR>
 nnoremap <leader>ga :action ParameterInfo<CR>
@@ -76,6 +75,10 @@ nnoremap <a-h> :tabm -1<CR>
 " Jump to
 nnoremap <leader>jf :action RecentFiles<CR>
 nnoremap <leader>jj :action RecentLocations<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fc :action GotoClass<CR>
+nnoremap <leader>fs :action GotoSymbol<CR>
+nnoremap <leader>fa :action GotoAction<CR>
 
 " Close buffer
 nnoremap <leader>q :x<CR>
