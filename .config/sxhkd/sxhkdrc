@@ -1,6 +1,6 @@
 # terminal
 super + Return
-    kitty
+    wezterm
 
 # app launcher
 super + d
@@ -46,12 +46,12 @@ Print
     flameshot gui
 
 # lockscreen
-super + shift + @Escape
-    lock
+# super + shift + @Escape
+#     lock
 
 # poweroff
-super + ctrl + shift + @Escape
-    poweroff
+# super + ctrl + shift + @Escape
+#     poweroff
 
 # calculator
 XF86Calculator

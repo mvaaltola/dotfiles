@@ -167,7 +167,7 @@ function _M.get()
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     -- Scratchpads
     awful.key({ modkey }, "grave", function ()
-        scratch.toggle("kitty --class scratchpad", { instance = "scratchpad" })
+        scratch.toggle("wezterm start --class scratchpad", { instance = "scratchpad" })
     end),
     awful.key({ modkey }, "z", function ()
         scratch.toggle("obsidian", { instance = "obsidian" })
