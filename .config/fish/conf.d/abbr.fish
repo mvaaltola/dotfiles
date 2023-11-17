@@ -2,9 +2,10 @@ abbr -a vimconf nvim ~/.config/nvim/init.vim
 abbr -a fishconf nvim ~/.config/fish
 abbr -a sxconf nvim ~/.config/sxhkd/sxhkdrc
 
-abbr -a ls exa
-abbr -a la exa -alh
-abbr -a ll exa -lh
+abbr -a cd cl
+abbr -a ls eza
+abbr -a la eza -alh
+abbr -a ll eza -lh
 abbr -a vim nvim
 abbr -a vi nvim
 abbr -a v nvim
