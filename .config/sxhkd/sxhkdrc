@@ -10,6 +10,10 @@ super + d
 super + c
     rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
+# password manager
+super + shift + c
+    rofi-rbw
+
 # dunst notifications
 super + {_,shift +} o
     dunstctl {close,history-pop}
