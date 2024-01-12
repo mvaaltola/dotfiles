@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+rbw unlocked && exit 0
+
+export PASSWORD=$(printf '' | rofi -dmenu -p "Master Password" -password -lines 0)
+
+expect -c "
+spawn rbw unlock
+expect \"Master Password: \"
+send \"$::env(PASSWORD)\\n\"
+interact
+"
+
+unset PASSWORD
