@@ -1,0 +1,6 @@
+# Forces clipboard backend for emoji
+# Match every window to always include
+filter_title: ".*"
+backend: Clipboard
+includes:
+  - "../match/_emoji.yml"

@@ -1,0 +1,13 @@
+matches:
+  - trigger: ":y:"
+    replace: "👍"
+  - trigger: ":lol:"
+    replace: "😂"
+  - trigger: ":wow:"
+    replace: "😮"
+  - trigger: ":ok:"
+    replace: "👌"
+  - trigger: ":sw:"
+    replace: "😅"
+  - trigger: ":ups:"
+    replace: "🙃"

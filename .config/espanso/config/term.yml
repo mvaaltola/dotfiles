@@ -1,0 +1,3 @@
+# Disable fast inject in terminal
+filter_class: "(org.wezfurlong.wezterm|kitty|scratchpad)"
+disable_x11_fast_inject: true
