@@ -1,19 +1,20 @@
-abbr -a vimconf nvim ~/.config/nvim/init.vim
-abbr -a fishconf nvim ~/.config/fish
-abbr -a sxconf nvim ~/.config/sxhkd/sxhkdrc
+abbr -a vimconf nv ~/.config/nvim/init.vim
+abbr -a fishconf nv ~/.config/fish
+abbr -a sxconf nv ~/.config/sxhkd/sxhkdrc
 
 abbr -a cd cl
 abbr -a ls eza
 abbr -a la eza -alh
 abbr -a ll eza -lh
-abbr -a vim nvim
-abbr -a vi nvim
-abbr -a v nvim
+abbr -a nvim nv
+abbr -a vim nv
+abbr -a vi nv
+abbr -a v nv
 abbr -a :q exit
 abbr -a cfg dotbare
-abbr -a tp trash-put
+abbr -a icat wezterm imgcat
 
-abbr -a ssh kitty +kitten ssh
+# abbr -a ssh wezterm ssh
 
 abbr -a g git
 abbr -a ga git add
@@ -36,6 +37,7 @@ abbr -a gc git commit
 abbr -a gca git commit --amend --no-edit
 abbr -a gcar git commit --amend
 abbr -a gcan git commit --amend --no-edit --date=now
+abbr -a gcf git fixup
 abbr -a gm git merge --no-ff
 abbr -a gundo git reset --soft HEAD~1
 abbr -a gP git push --set-upstream
