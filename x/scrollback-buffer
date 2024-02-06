@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cleanup() { rm -f "$1"; }
+trap cleanup EXIT
+cat "$1" | page
