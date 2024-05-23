@@ -27,7 +27,7 @@ theme.fg_focus      = theme.bg_normal
 theme.fg_urgent     = theme.bg_normal
 theme.fg_minimize   = theme.bg_normal
 
-theme.useless_gap   = dpi(6) -- 3
+theme.useless_gap   = dpi(3) -- 3
 theme.border_width  = dpi(1) -- 2
 theme.border_normal = xrdb.color7
 theme.border_focus  = theme.bg_focus
