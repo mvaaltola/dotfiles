@@ -8,15 +8,23 @@ matches:
   - trigger: ":soa"
     replace: "segment-observations-api"
 
-  - trigger: ":gp"
+  - trigger: ":bp "
     replace: "{{out}}"
     vars:
       - name: out
         type: shell
         params:
-          cmd: "~/x/getpw 'google-vaalto.la main'"
+          cmd: "~/x/getpw 'Bitwarden'"
+
+  - trigger: ":gp "
+    replace: "{{out}}"
+    vars:
+      - name: out
+        type: shell
+        params:
+          cmd: "~/x/getpw 'google-vaalto.la-main'"
   
-  - trigger: ":rp"
+  - trigger: ":rp "
     replace: "{{out}}"
     vars:
       - name: out
@@ -24,10 +32,10 @@ matches:
         params:
           cmd: "~/x/getpw 'arch-p1g4'"
 
-  - trigger: ":vp"
+  - trigger: ":vp "
     replace: "{{out}}"
     vars:
       - name: out
         type: shell
         params:
-          cmd: "~/x/getpw 'Vaisala main account'"
+          cmd: "~/x/getpw 'vaisala-main'"
