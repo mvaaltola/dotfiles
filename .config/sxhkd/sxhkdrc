@@ -49,45 +49,40 @@ XF86MonBrightness{Up,Down}
 Print
     flameshot gui
 
-# lockscreen
-# super + shift + @Escape
-#     lock
-
-# poweroff
-# super + ctrl + shift + @Escape
-#     poweroff
-
 # calculator
 XF86Calculator
     speedcrunch
 
 # leader keymaps
-super + space; r; s
+super + semicolon; r; s
     sxhkdreload
 
-super + space; r; w
+super + semicolon; r; w
     wpreload
 
-super + space; r; p
+super + semicolon; r; p
     picomreload
 
-super + space; r; m
+super + semicolon; r; m
     monreload
 
-super + space; r; d
+super + semicolon; r; d
     dunstreload
 
-super + space; r; r
+super + semicolon; r; r
     redshiftreload
 
-super + space; q; q
+super + semicolon; q; q
     qgis
 
-super + space; q; d
+super + semicolon; q; d
     qgisdefault
 
-super + space; q; t
+super + semicolon; q; t
     qgiskimu
 
-super + space; q; m
+super + semicolon; q; m
     qgismodelbaker
+
+super + semicolon; v
+    vivaldi
