@@ -8,7 +8,7 @@ x-scheme-handler/https=vivaldi-stable.desktop
 inode/directory=lf.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/msteams=teams.desktop
-x-scheme-handler/mailto=userapp-Thunderbird-AL0NC2.desktop
+x-scheme-handler/mailto=vivaldi-stable.desktop
 x-scheme-handler/about=vivaldi-stable.desktop
 x-scheme-handler/unknown=vivaldi-stable.desktop
 x-scheme-handler/ftp=vivaldi-stable.desktop
@@ -22,6 +22,7 @@ application/x-extension-xht=vivaldi-stable.desktop
 x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
 message/rfc822=userapp-Thunderbird-AL0NC2.desktop
 x-scheme-handler/mid=userapp-Thunderbird-AL0NC2.desktop
+x-scheme-handler/webcal=vivaldi-stable.desktop
 
 [Added Associations]
 application/octet-stream=vivaldi-stable.desktop;
