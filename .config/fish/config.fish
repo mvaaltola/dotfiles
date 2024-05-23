@@ -12,4 +12,6 @@ if status is-interactive
     # Set vim keybinds
     fish_vi_key_bindings
 
+    zoxide init fish | source
+
 end

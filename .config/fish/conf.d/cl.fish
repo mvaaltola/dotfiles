@@ -1,4 +1,4 @@
-function cl --wraps cd --description 'alias cd && lsif'
-    cd $argv
+function cl --wraps z --description 'alias z && lsif'
+    z $argv
     lsif
 end
