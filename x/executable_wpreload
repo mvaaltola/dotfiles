@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+xwallpaper --zoom ~/.local/share/bg
+

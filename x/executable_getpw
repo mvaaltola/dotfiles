@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [ "$#" -eq 0 ]; then
+    echo 'usage: getpw <NAME>'
+    exit 1
+fi
+
+~/x/rbwunlock > /dev/null 2>&1
+
+rbw unlocked > /dev/null 2>&1 || exit 0
+
+rbw get "$1"

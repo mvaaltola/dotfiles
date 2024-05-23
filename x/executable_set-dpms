@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+PLUGGED=0
+
+if [[ ! -n "$1" ]]; then
+    PLUGGED=$(cat /sys/class/power_supply/AC/online)
+fi
+
+if [[ $1 == "off" ]]; then
+    PLUGGED=1
+elif [[ $1 == "on" ]]; then
+    PLUGGED=0
+fi
+
+if [[ $PLUGGED == "1" ]]; then
+    xset s 0
+    xset dpms 0 0 0
+else
+    xset s 555
+    xset dpms 555 555 555
+fi

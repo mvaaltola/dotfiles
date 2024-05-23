@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+killall -q picom
+while pgrep -x picom > /dev/null; do sleep 1; done
+picom -b --backend glx &
+notify-send "Reloaded picom"

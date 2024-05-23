@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+sleep 1
+xset dpms force off
+sleep 3
+xset dpms force on
+notify-send "Reset dpms"
