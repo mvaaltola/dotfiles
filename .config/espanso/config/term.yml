@@ -1,3 +1,6 @@
-# Disable fast inject in terminal
-filter_class: "(org.wezfurlong.wezterm|kitty|scratchpad)"
-disable_x11_fast_inject: true
+filter_class: "(org.wezfurlong.wezterm|scratchpad)"
+enable: true
+# disable_x11_fast_inject: true
+# backend: Clipboard
+# extra_includes:
+#   - "../match/_wez.yml"
