@@ -1,0 +1,9 @@
+configuration {
+	modi: "window,drun,ssh,combi";
+	lines: 20;
+	font: "Cascadia Code PL 14";
+	terminal: "kitty";
+	combi-modi: "drun,ssh,window";
+}
+
+@theme "~/.cache/wal/rofi-custom"

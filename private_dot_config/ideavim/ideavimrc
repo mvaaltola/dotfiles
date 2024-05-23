@@ -1,0 +1,87 @@
+set surround
+set commentary
+set ideajoin
+set ideamarks
+
+set quickscope
+# Only highlight on keypress
+let g:qs_highlight_on_keys=["f", "F", "t", "T"]
+
+set nu rnu
+set ignorecase
+set smartcase
+set incsearch
+set scrolloff=8
+" set iskeyword-=_
+set visualbell
+
+let mapleader=" "
+
+" Reload configuration
+nnoremap <leader>R :source ~/.config/ideavim/ideavimrc<CR>
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" Jump to next/prev
+nnoremap ]c :action VcsShowNextChangeMarker<CR>
+nnoremap [c :action VcsShowPrevChangeMarker<CR>
+nnoremap ]m :action MethodDown<CR>
+nnoremap [m :action MethodUp<CR>
+nnoremap ]e :action GotoNextError<CR>
+nnoremap [e :action GotoPreviousError<CR>
+nnoremap ]u :action GotoNextElementUnderCaretUsage<CR>
+nnoremap [u :action GotoPrevElementUnderCaretUsage<CR>
+nnoremap ]i :action GotoImplementation<CR>
+nnoremap [i :action GotoSuperMethod<CR>
+
+" Leader maps
+" View
+nnoremap <leader><leader> :action HideAllWindows<CR>
+
+" Refactoring and docs
+nnoremap <leader>rr :action RenameElement<CR>
+nnoremap <leader>re :action ExtractMethod<CR>
+nnoremap <leader>ri :action OptimizeImports<CR>
+nnoremap <leader>rt :action InsertLiveTemplate<CR>
+nnoremap <leader>rf :action ReformatCode<CR>
+nnoremap <leader><Esc> :action ShowErrorDescription<CR>
+nnoremap <leader><CR> :action ShowIntentionActions<CR>
+
+" Testing and debugging
+nnoremap <leader>pp :action ToggleLineBreakpoint<CR>
+nnoremap <leader>pt :action ToggleBreakpointEnabled<CR>
+nnoremap <leader>tt :action RunClass<CR>
+nnoremap <leader>tr :action Run<CR>
+nnoremap <leader>td :action ContextDebug<CR>
+nnoremap <leader>tq :action Stop<CR>
+
+" Jumping
+nnoremap <leader>gt :action GotoTest<CR>
+nnoremap <leader>gd :action QuickJavaDoc<CR>
+nnoremap <leader>gp :action GotoSuperclass<CR>
+nnoremap <leader>ga :action ParameterInfo<CR>
+
+" Tab/split manipulation
+nnoremap <leader>ww :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <leader>wv :action SplitVertically<CR>
+nnoremap <leader>ws :action SplitHorizontally<CR>
+nnoremap <leader>wq :action Unsplit<CR>
+nnoremap <leader>wQ :action CloseContent<CR>
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <a-l> :tabm +1<CR>
+nnoremap <a-h> :tabm -1<CR>
+
+" Jump to
+nnoremap <leader>jf :action RecentFiles<CR>
+nnoremap <leader>jj :action RecentLocations<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fc :action GotoClass<CR>
+nnoremap <leader>fs :action GotoSymbol<CR>
+nnoremap <leader>fa :action GotoAction<CR>
+
+" Close buffer
+nnoremap <leader>q :x<CR>

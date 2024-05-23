@@ -1,0 +1,41 @@
+matches:
+  - trigger: ":ra"
+    replace: "ROADAI-"
+
+  - trigger: ":vaisa"
+    replace: "mikael.vaaltola@vaisala.com"
+
+  - trigger: ":soa"
+    replace: "segment-observations-api"
+
+  - trigger: ":bp "
+    replace: "{{out}}"
+    vars:
+      - name: out
+        type: shell
+        params:
+          cmd: "~/x/getpw 'Bitwarden'"
+
+  - trigger: ":gp "
+    replace: "{{out}}"
+    vars:
+      - name: out
+        type: shell
+        params:
+          cmd: "~/x/getpw 'google-vaalto.la-main'"
+  
+  - trigger: ":rp "
+    replace: "{{out}}"
+    vars:
+      - name: out
+        type: shell
+        params:
+          cmd: "~/x/getpw 'arch-p1g4'"
+
+  - trigger: ":vp "
+    replace: "{{out}}"
+    vars:
+      - name: out
+        type: shell
+        params:
+          cmd: "~/x/getpw 'vaisala-main'"

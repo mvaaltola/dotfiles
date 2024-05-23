@@ -1,0 +1,24 @@
+# espanso configuration file, docs @ https://espanso.org/docs/
+
+# Customize the key used to disable and enable espanso (when double tapped)
+# Available options: CTRL, SHIFT, ALT, CMD, OFF
+# You can also specify the key variant, such as LEFT_CTRL, RIGHT_SHIFT, etc...
+toggle_key: RIGHT_CTRL
+
+# By default, espanso uses the "Auto" backend which should work well in most cases,
+# but you may want to try the "Clipboard" or "Inject" backend in case of issues.
+backend: Auto
+disable_x11_fast_inject: false
+
+# Enable/disable the config auto-reload after a file change is detected.
+auto_restart: true
+
+# Because injecting long texts char-by-char is a slow operation, espanso automatically
+# uses the clipboard if the text is longer than 'clipboard_threshold' characters.
+clipboard_threshold: 100
+
+# Use shift+insert to paste, should work in terminals
+paste_shortcut: SHIFT+INSERT
+
+# Use xclip to copy/paste
+x11_use_xclip_backend: true

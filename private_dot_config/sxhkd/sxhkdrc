@@ -1,0 +1,88 @@
+# terminal
+super + Return
+    wezterm
+
+# app launcher
+super + d
+    rofi -show combi -modi combi
+
+# clipboard manager
+super + c
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+# password manager
+super + shift + c
+    rofi-rbw
+
+# dunst notifications
+super + {_,shift +} o
+    dunstctl {close,history-pop}
+
+# volume controls
+XF86Audio{Raise,Lower}Volume
+    pamixer {-i,-d} 2
+
+super + {XF86AudioRaiseVolume, F12}
+    pamixer {-i,-d} 2
+
+{XF86AudioMute, super + F11}
+    pamixer -t
+
+# media controls
+XF86Audio{Play,Next,Prev}
+    playerctl {play-pause,next,previous}
+
+super + {F9,F8,F10}
+    playerctl {play-pause,previous,next}
+
+super + shift + {F8,F10}
+    playerctl position 5{-,+}
+
+super + shift + F9
+    notify-send "$(playerctl metadata title)" "$(playerctl metadata artist)/$(playerctl metadata album)"
+
+# brightness controls
+XF86MonBrightness{Up,Down}
+    brightnessctl s 10{+,-}%
+
+# printscreen
+Print
+    flameshot gui
+
+# calculator
+XF86Calculator
+    speedcrunch
+
+# leader keymaps
+super + semicolon; r; s
+    sxhkdreload
+
+super + semicolon; r; w
+    wpreload
+
+super + semicolon; r; p
+    picomreload
+
+super + semicolon; r; m
+    monreload
+
+super + semicolon; r; d
+    dunstreload
+
+super + semicolon; r; r
+    redshiftreload
+
+super + semicolon; q; q
+    qgis
+
+super + semicolon; q; d
+    qgisdefault
+
+super + semicolon; q; t
+    qgiskimu
+
+super + semicolon; q; m
+    qgismodelbaker
+
+super + semicolon; v
+    vivaldi

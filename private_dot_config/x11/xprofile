@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# start picom compositor
+picomreload &
+
+# run kb remap script
+remaps &
+
+# set wallpaper, colorschemes with wal
+setbg &
+
+sxhkd &
+redshift &
+
+# run ~/.config/autostart/*.desktop
+dex -a &
+
+# run greenclip clipboard daemon 
+greenclip daemon &
+
+# set dpms based on AC power
+set-dpms &
+
+# wmname fix for IDEA
+export AWT_TOOLKIT="MToolkit wmname LG3D"
+export _JAVA_AWT_WM_NONREPARENTING=1
+

@@ -1,0 +1,40 @@
+[user]
+  name = Mikael Vaaltola
+  email = mikael.vaaltola@vaisala.com
+	github = mvaaltola
+
+[core]
+  editor = nvim
+  autocrlf = input
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+
+[alias]
+  st = status --short --branch
+  slog = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cs) %C(bold blue)<%an>%Creset' --abbrev-commit
+  fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+
+[pull]
+  ff = only
+
+[submodule]
+  recurse = true
+
+[init]
+  templatedir = ~/.config/git/git-templates
+  defaultBranch = main
+
+[delta]
+  navigate = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+[push]
+	autoSetupRemote = true
+[rebase]
+	autosquash = true
