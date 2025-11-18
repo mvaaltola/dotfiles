@@ -1,7 +1,7 @@
 [user]
   name = Mikael Vaaltola
-  email = mikael.vaaltola@vaisala.com
-	github = mvaaltola
+  email = mikael.vaaltola@mapbox.com
+  github = mvaaltola
 
 [core]
   editor = nvim
@@ -18,6 +18,7 @@
 
 [pull]
   ff = only
+  rebase = true
 
 [submodule]
   recurse = true
@@ -28,13 +29,48 @@
 
 [delta]
   navigate = true
+  side-by-side = false
+  line-numbers = true
 
 [merge]
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 
 [diff]
-  colorMoved = default
+  colorMoved = plain
+  algorithm = histogram
+  mnemonicPrefix = true
+  renames = true
+
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
+
 [rebase]
-	autosquash = true
+  autoSquash = true
+  updateRefs = true
+  autoStash = true
+
+[branch]
+  sort = -committerdate
+
+[column]
+  ui = auto
+
+[tag]
+  sort = version:refname
+
+[fetch]
+  prune = true
+  all = true
+  pruneTags = true
+
+[commit]
+  verbose = true
+
+[help]
+  autocorrect = prompt
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
