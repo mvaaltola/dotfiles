@@ -50,7 +50,11 @@ nnoremap <leader><CR> :action ShowIntentionActions<CR>
 
 " Testing and debugging
 nnoremap <leader>pp :action ToggleLineBreakpoint<CR>
+nnoremap <leader>po :action ToggleTemporaryLineBreakpoint<CR>
 nnoremap <leader>pt :action ToggleBreakpointEnabled<CR>
+nnoremap <leader>pv :action ViewBreakpoints<CR>
+nnoremap <leader>pc :action Debugger.RemoveAllBreakpointsInFile<CR>
+nnoremap <leader>pC :action Debugger.RemoveAllBreakpoints<CR>
 nnoremap <leader>tt :action RunClass<CR>
 nnoremap <leader>tr :action Run<CR>
 nnoremap <leader>td :action ContextDebug<CR>
@@ -85,3 +89,10 @@ nnoremap <leader>fa :action GotoAction<CR>
 
 " Close buffer
 nnoremap <leader>q :x<CR>
+
+" Show blame
+nnoremap <leader>vb :action GitToolBox.BlameDetails<CR>
+" Stage current hunk
+nnoremap <leader>vc :action VcsShowCurrentChangeMarker<CR>
+nnoremap <leader>va :action ChangesView.AddUnversioned<CR>
+nnoremap <leader>vr :action Git.Stage.Reset<CR>
