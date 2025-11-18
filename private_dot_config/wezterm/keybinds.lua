@@ -1,6 +1,6 @@
 local wezterm = require('wezterm')
 local act = wezterm.action
-local wmod = 'SHIFT|ALT'
+local wmod = 'SHIFT|SUPER'
 
 require('scrollback')
 
@@ -21,27 +21,44 @@ function M.apply(config)
     config.disable_default_key_bindings = true
 
     config.keys = {
+        -- Quit, reload, palette
+        { key = 'q', mods = 'CMD', action = wezterm.action.QuitApplication },
         { key = 'F5', mods = wmod, action = act.ReloadConfiguration },
-        { key = 'k', mods = 'CTRL', action = act.ActivateCommandPalette },
+        { key = 'p', mods = wmod, action = act.ActivateCommandPalette },
+        -- Scrolling
+        { key = 'j', mods = 'SUPER', action = act.ScrollByLine(1) },
+        { key = 'k', mods = 'SUPER', action = act.ScrollByLine(-1) },
+        { key = 'h', mods = 'SUPER', action = act.ScrollToPrompt(-1) },
+        { key = 'l', mods = 'SUPER', action = act.ScrollToPrompt(1) },
+        { key = 'PageUp', mods = 'SUPER', action = act.ScrollByPage(-1) },
+        { key = 'PageDown', mods = 'SUPER', action = act.ScrollByPage(1) },
+        -- Claude SHIFT-ENTER
+        {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}},
         -- Tab management
         { key = 'T', mods = wmod, action = act.SpawnTab 'CurrentPaneDomain' },
-        { key = 't', mods = 'ALT', action = act.SpawnTab 'CurrentPaneDomain' },
         { key = 'Tab', mods = 'SHIFT|CTRL', action = act.ActivateTabRelative(-1)},
         { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1)},
         -- Pane management
+        -- Splitting and swapping
         { key = 'V', mods = wmod, action = act.SplitHorizontal{ domain = 'CurrentPaneDomain' } },
         { key = 'S', mods = wmod, action = act.SplitVertical{ domain = 'CurrentPaneDomain' } },
         { key = 'Space', mods = wmod, action = act{PaneSelect={mode='SwapWithActiveKeepFocus'}}},
+        -- Zoom pane (M for monocle)
         { key = 'M', mods = wmod, action = act.TogglePaneZoomState },
+        -- Navigate panes
         { key = 'H', mods = wmod, action = act.ActivatePaneDirection 'Left' },
         { key = 'J', mods = wmod, action = act.ActivatePaneDirection 'Down' },
         { key = 'K', mods = wmod, action = act.ActivatePaneDirection 'Up' },
         { key = 'L', mods = wmod, action = act.ActivatePaneDirection 'Right' },
+        -- Close pane
         { key = 'Q', mods = wmod, action = act.CloseCurrentPane { confirm = true } },
+        -- Resize pane with ctrl-shift-hjkl
         { key = 'H', mods = 'CTRL|SHIFT', action = act.AdjustPaneSize { 'Left', 5 } },
         { key = 'J', mods = 'CTRL|SHIFT', action = act.AdjustPaneSize { 'Down', 5 } },
         { key = 'K', mods = 'CTRL|SHIFT', action = act.AdjustPaneSize { 'Up', 5 } },
         { key = 'L', mods = 'CTRL|SHIFT', action = act.AdjustPaneSize { 'Right', 5 } },
+        -- Open scrollback in vim
+        { key = 'G', mods = wmod, action = act{EmitEvent='trigger-vim-with-scrollback'} },
         -- Clear scrollback and redraw prompt
         {
           key = 'U',
@@ -65,16 +82,15 @@ function M.apply(config)
             end
           end),
         },
-        { key = 'c', mods = 'ALT', action = act.CopyTo 'ClipboardAndPrimarySelection' },
-        { key = 'v', mods = 'ALT', action = act.PasteFrom 'Clipboard' },
+        { key = 'c', mods = 'SUPER', action = act.CopyTo 'ClipboardAndPrimarySelection' },
+        { key = 'v', mods = 'SUPER', action = act.PasteFrom 'Clipboard' },
         { key = 'Insert', mods = 'SHIFT', action = act.PasteFrom 'Clipboard' },
-        -- Font size management   
+        -- Font size management - leader +-, reset with leader 0
         { key = '+', mods = wmod, action = act.IncreaseFontSize },
         { key = '_', mods = wmod, action = act.DecreaseFontSize },
         { key = ')', mods = wmod, action = act.ResetFontSize },
-        -- Custom events
-        { key = 'G', mods = wmod, action = act{EmitEvent='trigger-vim-with-scrollback'} },
-        { key = 'P', mods = wmod, action = act{EmitEvent='toggle-padding'} },
+        -- Toggle padding with custom event
+        -- { key = 'P', mods = wmod, action = act{EmitEvent='toggle-padding'} },
     }
 end
 

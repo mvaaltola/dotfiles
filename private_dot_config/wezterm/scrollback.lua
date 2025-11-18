@@ -17,6 +17,9 @@ wezterm.on("trigger-vim-with-scrollback", function(window, pane)
 
   -- Open a new window running vim and tell it to open the file
   window:perform_action(wezterm.action{SpawnCommandInNewTab={
-    args={"scrollback-buffer", name}}
+    args={
+      os.getenv "SHELL",
+      "-c",
+      "scrollback-buffer " .. wezterm.shell_quote_arg(name)}}
   }, pane)
 end)
