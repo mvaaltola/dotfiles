@@ -1,0 +1,44 @@
+matches:
+  - trigger: ":ba"
+    replace: "BASEMAP-"
+
+  - trigger: ":ge"
+    replace: "geodata-exports"
+
+  - trigger: ":pb"
+    replace: "procedural buildings"
+
+  - trigger: ":me "
+    replace: "mikael.vaaltola@mapbox.com"
+
+  - trigger: ":rp "
+    replace: "{{out}}"
+    vars:
+      - name: out
+        type: shell
+        params:
+          cmd: "~/x/getpw 'MVM3'"
+
+  - trigger: ":mp "
+    replace: "{{out}}"
+    vars:
+      - name: out
+        type: shell
+        params:
+          cmd: "~/x/getpw 'Okta'"
+
+  - trigger: ":mbx "
+    replace: "{{out}}"
+    vars:
+      - name: out
+        type: shell
+        params:
+          cmd: "rbw code 'mbxcli'"
+
+  - trigger: ":mat "
+    replace: "{{out}}"
+    vars:
+      - name: out
+        type: shell
+        params:
+          cmd: "~/x/getpw 'mapbox-geodata access token'"

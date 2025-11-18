@@ -18,7 +18,10 @@ auto_restart: true
 clipboard_threshold: 100
 
 # Use shift+insert to paste, should work in terminals
-paste_shortcut: SHIFT+INSERT
+# paste_shortcut: SHIFT+INSERT
 
 # Use xclip to copy/paste
 x11_use_xclip_backend: true
+
+# Change search shortcut to avoid conflict with Raycast
+search_shortcut: ALT+SHIFT+SPACE

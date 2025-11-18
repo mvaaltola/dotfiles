@@ -1,12 +1,12 @@
 matches:
-  - trigger: ":ra"
-    replace: "ROADAI-"
+  - trigger: ":mv"
+    replace: "Mikael Vaaltola"
 
-  - trigger: ":vaisa"
-    replace: "mikael.vaaltola@vaisala.com"
+  - trigger: ":br "
+    replace: "Best regards,\nMikael Vaaltola"
 
-  - trigger: ":soa"
-    replace: "segment-observations-api"
+  - trigger: ":yt "
+    replace: "Ystävällisin terveisin,\nMikael Vaaltola"
 
   - trigger: ":bp "
     replace: "{{out}}"
@@ -24,18 +24,18 @@ matches:
         params:
           cmd: "~/x/getpw 'google-vaalto.la-main'"
   
-  - trigger: ":rp "
+  - trigger: ":tel "
     replace: "{{out}}"
     vars:
       - name: out
         type: shell
         params:
-          cmd: "~/x/getpw 'arch-p1g4'"
+          cmd: "rbw get 'Mikael' --field Phone"
 
-  - trigger: ":vp "
+  - trigger: ":addr "
     replace: "{{out}}"
     vars:
       - name: out
         type: shell
         params:
-          cmd: "~/x/getpw 'vaisala-main'"
+          cmd: "rbw get 'Mikael' --field Address"
