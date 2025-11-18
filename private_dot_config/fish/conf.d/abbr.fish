@@ -1,6 +1,5 @@
-abbr -a vimconf nvim ~/.config/nvim/init.vim
-abbr -a fishconf nvim ~/.config/fish
-abbr -a sxconf nvim ~/.config/sxhkd/sxhkdrc
+abbr -a vconf nvim ~/.config/nvim/init.vim
+abbr -a fconf nvim ~/.config/fish
 
 abbr -a cd cl
 abbr -a ls eza
@@ -10,7 +9,6 @@ abbr -a vim nvim
 abbr -a vi nvim
 abbr -a v nvim
 abbr -a :q exit
-abbr -a cfg dotbare
 abbr -a icat wezterm imgcat
 abbr -a cm chezmoi
 abbr -a cma chezmoi add
@@ -23,7 +21,7 @@ abbr -a gap git add -p
 abbr -a gch git checkout
 abbr -a gr git restore
 abbr -a grs git restore --staged
-abbr -a gbr git branch 
+abbr -a gbr git branch
 abbr -a gre git rebase
 abbr -a gd git diff
 abbr -a gds git diff --staged
@@ -34,6 +32,7 @@ abbr -a gsw git switch
 abbr -a gl git slog
 abbr -a glf git log --pretty=fuller
 abbr -a gll git log -p
+abbr -a glh git log --oneline --follow
 abbr -a gc git commit
 abbr -a gca git commit --amend --no-edit
 abbr -a gcar git commit --amend
@@ -41,9 +40,15 @@ abbr -a gcan git commit --amend --no-edit --date=now
 abbr -a gcf git fixup
 abbr -a gm git merge --no-ff
 abbr -a gundo git reset --soft HEAD~1
-abbr -a gP git push --set-upstream
-abbr -a gPF git push -f
+abbr -a gP git push
+abbr -a gPF git push --force-with-lease
 abbr -a gp git pull
+abbr -a gw git worktree
+abbr -a gwl git worktree list
+abbr -a gwa git worktree add
+abbr -a gwr git worktree remove
+abbr -a gcp git cherry-pick
+abbr -a gha gh pr checks --watch
 
 abbr -a d docker
 abbr -a dc docker compose
@@ -57,3 +62,9 @@ abbr -a pinst pacman -Qent
 abbr -a pdeps pacman -Qdqt
 
 abbr -a k kubectl
+
+function last_history_item; echo $history[1]; end
+abbr -a !! --position anywhere --function last_history_item
+
+abbr -a sg set -gx
+abbr -a me mbx env
