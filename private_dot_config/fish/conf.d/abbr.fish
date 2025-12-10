@@ -29,6 +29,8 @@ abbr -a gs git status --short --branch
 abbr -a gss git status
 abbr -a gst git stash
 abbr -a gsw git switch
+abbr -a gsh git show
+abbr -a gshs git show --stat
 abbr -a gl git slog
 abbr -a glf git log --pretty=fuller
 abbr -a gll git log -p
