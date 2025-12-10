@@ -1,4 +1,2 @@
-#!/usr/bin/env bash
-
 fc=$(ls -1 | wc -l)
 if ((fc <= 100)); then eza; fi

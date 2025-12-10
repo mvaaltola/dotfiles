@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 if [ "$#" -eq 0 ]; then
     echo 'usage: getpw <NAME>'
     exit 1
