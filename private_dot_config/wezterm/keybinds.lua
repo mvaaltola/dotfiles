@@ -21,8 +21,8 @@ function M.apply(config)
     config.disable_default_key_bindings = true
 
     config.keys = {
-        -- Quit, reload, palette
-        { key = 'q', mods = 'CMD', action = wezterm.action.QuitApplication },
+        -- Close pane, reload, command palette
+        { key = 'q', mods = 'CMD', action = act.CloseCurrentPane { confirm = true } },
         { key = 'F5', mods = wmod, action = act.ReloadConfiguration },
         { key = 'p', mods = wmod, action = act.ActivateCommandPalette },
         -- Scrolling
@@ -51,7 +51,7 @@ function M.apply(config)
         { key = 'K', mods = wmod, action = act.ActivatePaneDirection 'Up' },
         { key = 'L', mods = wmod, action = act.ActivatePaneDirection 'Right' },
         -- Close pane
-        { key = 'Q', mods = wmod, action = act.CloseCurrentPane { confirm = true } },
+        -- { key = 'Q', mods = wmod, action = act.CloseCurrentPane { confirm = true } },
         -- Resize pane with ctrl-shift-hjkl
         { key = 'H', mods = 'CTRL|SHIFT', action = act.AdjustPaneSize { 'Left', 5 } },
         { key = 'J', mods = 'CTRL|SHIFT', action = act.AdjustPaneSize { 'Down', 5 } },
@@ -91,6 +91,22 @@ function M.apply(config)
         { key = ')', mods = wmod, action = act.ResetFontSize },
         -- Toggle padding with custom event
         -- { key = 'P', mods = wmod, action = act{EmitEvent='toggle-padding'} },
+	-- Rename tabs
+	{
+	  key = 'R',
+	  mods = wmod,
+	  action = act.PromptInputLine {
+	    description = 'Enter new name for tab',
+	    action = wezterm.action_callback(function(window, pane, line)
+	      -- line will be `nil` if they hit escape without entering anything
+	      -- An empty string if they just hit enter
+              -- Or the actual line of text they wrote
+	      if line then
+	        window:active_tab():set_title(line)
+	      end
+	    end),
+	  },
+	},
     }
 end
 
