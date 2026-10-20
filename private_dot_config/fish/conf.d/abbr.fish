@@ -59,9 +59,10 @@ abbr -a dcrf "docker compose down --volumes --remove-orphans && docker compose u
 abbr -a dcd "docker compose down --volumes --remove-orphans"
 abbr -a dcu "docker compose up -d"
 
-abbr -a ppo "paru -Syu --noconfirm && printf '\n\nshutting down in 15s\n\n' && sleep 15 && poweroff"
-abbr -a pinst pacman -Qent
-abbr -a pdeps pacman -Qdqt
+
+# abbr -a ppo "paru -Syu --noconfirm && printf '\n\nshutting down in 15s\n\n' && sleep 15 && poweroff"
+# abbr -a pinst pacman -Qent
+# abbr -a pdeps pacman -Qdqt
 
 abbr -a k kubectl
 
@@ -69,4 +70,4 @@ function last_history_item; echo $history[1]; end
 abbr -a !! --position anywhere --function last_history_item
 
 abbr -a sg set -gx
-abbr -a me mbx env
+abbr -a awsl aws sso login
