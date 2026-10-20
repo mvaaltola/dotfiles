@@ -5,6 +5,9 @@ matches:
   - trigger: ":ge"
     replace: "geodata-exports"
 
+  - trigger: ":be"
+    replace: "basemap-exports"
+
   - trigger: ":pb"
     replace: "procedural buildings"
 
