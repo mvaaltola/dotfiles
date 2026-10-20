@@ -1,0 +1,6 @@
+[".claude/skills"]
+    type = "git-repo"
+    url = "git@github.com:mvaaltola/skills.git"
+    refreshPeriod = "24h"
+    [".claude/skills".pull]
+        args = ["--ff-only"]
