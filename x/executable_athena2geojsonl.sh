@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ "$#" -ne 1 ]; then
-    echo "Usage: athena2geojsonl.sh <input.csv>"
+    echo 'Usage: athena2geojsonl.sh [input.csv] > [out.geojsonl]'
     exit 1
 fi
 
