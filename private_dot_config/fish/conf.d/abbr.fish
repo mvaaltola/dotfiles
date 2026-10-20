@@ -39,7 +39,7 @@ abbr -a gc git commit
 abbr -a gca git commit --amend --no-edit
 abbr -a gcar git commit --amend
 abbr -a gcan git commit --amend --no-edit --date=now
-abbr -a gcf git fixup
+abbr -a gcf git commit --fixup
 abbr -a gm git merge --no-ff
 abbr -a gundo git reset --soft HEAD~1
 abbr -a gP git push
