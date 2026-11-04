@@ -32,3 +32,7 @@ chezmoi age encrypt --passphrase --output ~/.local/share/chezmoi/key.txt.age ~/.
 ```
 
 if both are lost, the encrypted files can't be recovered.
+
+## skills
+
+Keep the skills checkout at `~/dev/skills` (clone `mvaaltola/skills` there on a new machine). Chezmoi manages `~/.claude/skills` as a symlink to that directory.
