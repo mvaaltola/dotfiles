@@ -25,6 +25,18 @@ function M.apply(config)
     -- config.color_scheme ='Catppuccin Macchiato'
     
     local scheme_def = wezterm.color.get_builtin_schemes()[scheme]
+    local theme_dir = wezterm.home_dir .. '/.local/state/omarchy/current/theme'
+    local theme_file = theme_dir .. '/wezterm.toml'
+    local theme = io.open(theme_file, 'r')
+    if theme then
+      local contents = theme:read('*a')
+      theme:close()
+      scheme_def = wezterm.serde.toml_decode(contents).colors
+      config.color_schemes = { omarchy = scheme_def }
+      config.color_scheme = 'omarchy'
+    end
+    -- Also watch for the Omarchy palette being created or replaced later.
+    wezterm.add_to_config_reload_watch_list(theme_file)
     config.window_background_opacity = 1.0
     config.macos_window_background_blur = 15
     config.window_frame = {
@@ -40,7 +52,8 @@ function M.apply(config)
           fg_color = scheme_def.foreground,
         },
         inactive_tab = {
-          bg_color = get_appearance():find('Dark') and '#181825' or '#dddddd',
+          bg_color = theme and scheme_def.background or
+            (get_appearance():find('Dark') and '#181825' or '#dddddd'),
           fg_color = scheme_def.foreground,
         },
         new_tab = {
