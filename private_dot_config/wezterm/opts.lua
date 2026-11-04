@@ -24,7 +24,8 @@ function M.apply(config)
 
     -- config.use_fancy_tab_bar = false
 
-    config.window_decorations = 'RESIZE'
+    config.window_decorations =
+        wezterm.target_triple:find('linux') and 'NONE' or 'RESIZE'
     config.hide_tab_bar_if_only_one_tab = true
 
     config.scrollback_lines = 500000
