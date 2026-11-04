@@ -10,4 +10,9 @@ end
 
 # mise activate fish | source
 fish_add_path ~/.local/share/mise/shims
-source "$(npm root -g)/@mapbox/mbxcli/bin/mbx.fish"
+if command -q npm
+    set -l mbx_fish "$(npm root -g)/@mapbox/mbxcli/bin/mbx.fish"
+    if test -f "$mbx_fish"
+        source "$mbx_fish"
+    end
+end
