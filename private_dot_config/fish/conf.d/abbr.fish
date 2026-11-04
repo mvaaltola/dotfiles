@@ -12,6 +12,7 @@ abbr -a :q exit
 abbr -a icat wezterm imgcat
 abbr -a cm chezmoi
 abbr -a cma chezmoi add
+abbr -a cms chezmoi status
 
 # abbr -a ssh wezterm ssh
 
