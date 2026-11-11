@@ -118,7 +118,7 @@ automatically-unhide-macos-hidden-apps = false
     #     activate
     # end tell'
     # '''
-    # ctrl-shift-alt-enter = 'exec-and-forget kitty'
+    ctrl-shift-alt-enter = 'exec-and-forget wezterm start'
     ctrl-shift-alt-n = 'exec-and-forget firefox --new-window'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
