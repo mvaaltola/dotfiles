@@ -1,3 +1,6 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- /* Keep focus-follows-mouse.enabled from the file on disk: ~/x/toggle-aerospace-autoraise.sh flips it. */ -}}
+{{- $ffm := .chezmoi.stdin | regexFind `(?m)^focus-follows-mouse\.enabled\s*=\s*(true|false)` | regexFind `(true|false)$` | default "true" -}}
 config-version = 2
 
 # You can use it to add commands that run after login to macOS user session.
@@ -49,7 +52,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
 # Focus follows mouse; replaces autoraise
-focus-follows-mouse.enabled = true
+focus-follows-mouse.enabled = {{ $ffm }}
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
