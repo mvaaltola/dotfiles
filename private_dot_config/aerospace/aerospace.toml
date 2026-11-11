@@ -227,6 +227,7 @@ automatically-unhide-macos-hidden-apps = false
     space = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
     shift-backspace = ['close-all-windows-but-current', 'mode main']
     f = ['fullscreen --no-outer-gaps', 'mode main']
+    m = ['mode main', 'exec-and-forget ~/x/toggle-aerospace-autoraise.sh'] # Toggle focus-follows-mouse
     e = ['mode main', 'exec-and-forget ~/x/extdisplay toggle'] # Toggle external monitor
 
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
