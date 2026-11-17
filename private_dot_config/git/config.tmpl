@@ -1,6 +1,6 @@
 [user]
   name = Mikael Vaaltola
-  email = mikael.vaaltola@mapbox.com
+  email = {{ get . "email" | default "mikael.vaaltola@mapbox.com" }}
   github = mvaaltola
 
 [core]

@@ -2,3 +2,10 @@ encryption = "age"
 [age]
     identity = "~/.config/chezmoi/key.txt"
     recipient = "age1uk2jefszuencgawyq5hkrjh5spu8ff3msl0v8md35txce6ley9ds2x7848"
+
+{{- $work := promptBoolOnce . "work" "Work machine" }}
+[data]
+    work = {{ $work }}
+{{- if not $work }}
+    email = {{ promptStringOnce . "email" "Personal git email" | quote }}
+{{- end }}

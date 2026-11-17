@@ -1,2 +1,53 @@
 README.md
 key.txt.age
+
+{{ if ne .chezmoi.os "darwin" }}
+# macOS only
+.config/aerospace
+x/extdisplay
+x/extdisplay.swift
+x/toggle-aerospace-autoraise.sh
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+# Linux only
+.config/arch
+.config/awesome
+.config/dunst
+.config/greenclip.toml
+.config/paru
+.config/picom
+.config/redshift
+.config/rofi
+.config/sxhkd
+.config/wal
+.config/x11
+x/dunstreload
+x/lock
+x/monreload
+x/picomreload
+x/rbwunlock
+x/redshiftreload
+x/remaps
+x/screen-home.sh
+x/screen-noext.sh
+x/set-dpms
+x/setbg
+x/sxhkdreload
+x/wpreload
+{{ end }}
+
+{{ if not (get . "work") }}
+# work machines only (set by `chezmoi init`)
+.config/aws
+.config/espanso/match/mapbox.yml
+.config/fish/conf.d/mbxnpm.fish
+x/athena2geojsonl.sh
+x/athena2json.py
+x/get-aws-mfa-token
+x/mbx-update.sh
+x/osmcsv2json.py
+x/osmv2json.py
+x/validate_changeset_counts.py
+x/wait-for-artifacts.sh
+{{ end }}
